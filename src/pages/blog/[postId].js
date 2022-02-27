@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Image from '../../components/Image'
 import Navbar from '../../components/Navbar'
 
-
 const redirect = (destination = '/') => ({ redirect: { destination } });
 const isValidParam = param => true; // TODO develop this validation
 
@@ -37,15 +36,15 @@ const Post = ({ postData: { content, data } }) => {
 
   return (
     <main>
-    <Navbar color="black" />
-    <div className='p-12 max-w-xl flex flex-col items-center justify-center m-auto gap-5'>
-      <Head>
-        <title>{data.title}</title>
-      </Head>
-      <h1 className='text-5xl text-bold text-red-800 mb-10'>{data.title}</h1>
-      <Image src={data.img} width={800} height={350} className='object-cover' />
-      <ReactMarkdown>{content}</ReactMarkdown>
-    </div>
+      <Navbar color="black" />
+      <div className='p-12 max-w-xl flex flex-col items-center justify-center m-auto gap-5'>
+        <Head>
+          <title>{data.title}</title>
+        </Head>
+        <h1 className='text-5xl text-bold text-red-800 mb-10'>{data.title}</h1>
+        <Image src={data.img} width={800} height={350} className='object-cover' />
+        <ReactMarkdown>{content}</ReactMarkdown>
+      </div>
     </main>
   )
 }

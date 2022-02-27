@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from "next/link";
 import SimpleCard from "../components/SimpleCard/";
 import styles from "../styles/home.module.scss";
@@ -7,7 +8,10 @@ import Navbar from '../components/Navbar'
 const Home = () => {
   return (
     <main>
-    <Navbar color="white" />
+      <Head>
+        <title>Home | Estudio Zande</title>
+      </Head>
+      <Navbar color="white" />
       <section>
         <div className={styles.cover}>
           <div className={styles.backgroundContainer}>
@@ -36,7 +40,7 @@ const Home = () => {
                 nuestros servicios con la permanente incorporación de nuevas
                 tecnologías.
               </p>
-              <Link href="/posts/example">
+              <Link href="/blog/example">
                 <button className={styles.mainButton}>Sobre nosotros</button>
               </Link>
             </div>

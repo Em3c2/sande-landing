@@ -17,16 +17,16 @@ const Navbar = ({ color }) => {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/">Estudio</Link>
+          <Link href="/estudio">Estudio</Link>
         </li>
         <li>
-          <Link href="/">Servicios</Link>
+          <Link href="/servicios">Servicios</Link>
         </li>
         <li>
-          <Link href="/">Blog</Link>
+          <Link href="/blog">Blog</Link>
         </li>
         <li>
-          <Link href="/">Contacto</Link>
+          <Link href="/contacto">Contacto</Link>
         </li>
       </ul>
     </nav>
