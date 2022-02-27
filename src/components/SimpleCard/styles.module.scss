@@ -1,0 +1,12 @@
+.card {
+  @apply rounded-3xl overflow-hidden;
+  min-height: 19rem;
+  box-shadow: 0px 6.15603px 30.7801px rgba(132, 145, 170, 0.19);
+  font-size: 20px;
+  font-weight: 600;
+  width: 376px;
+}
+
+.content {
+  padding: 20px 80px 20px 35px;
+}

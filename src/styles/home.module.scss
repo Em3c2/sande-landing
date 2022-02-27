@@ -1,0 +1,48 @@
+.cover {
+  @apply p-12 flex flex-col items-start justify-center m-auto gap-5;
+
+  .title {
+    @apply text-5xl max-w-xl z-10 font-bold text-white pb-3 pt-8;
+    line-height: 61px;
+  }
+
+  .mainConteiner {
+    @apply flex justify-between items-center w-full ml-8 min-w-max;
+  }
+
+  .mainParagraph {
+    @apply text-white lg:text-lg xl:text-xl pt-10;
+    line-height: 34px;
+    max-width: 534px;
+    font-weight: 400;
+  }
+
+  .mainButton {
+    @apply mt-10 text-white font-bold text-xl border-solid border-white rounded-full hover:bg-white hover:text-yellow-900;
+    border-width: 1px;
+    height: 61px;
+    width: 254px;
+  }
+
+  .backgroundContainer {
+    @apply absolute w-full h-screen top-0 left-0 -z-10;
+    min-height: 1080px;
+  }
+
+  .caption {
+    @apply min-w-fit;
+  }
+
+  .captionLogo {
+    @apply w-full grid place-items-center -mt-20 pointer-events-none select-none;
+  }
+
+  .logoContainer {
+    @apply relative lg:m-5 w-0 lg:w-60 xl:w-80;
+    height: 420px;
+  }
+}
+
+.cardsConteiner {
+  @apply flex justify-evenly flex-wrap mt-16;
+}

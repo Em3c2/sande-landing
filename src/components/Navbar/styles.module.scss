@@ -1,0 +1,11 @@
+.navbar {
+  @apply flex justify-between p-8 px-20 z-20;
+  
+  .links {
+    @apply flex gap-16 lg:gap-24 font-bold;
+
+    li {
+      @apply border-b-2 border-transparent hover:border-current transition-all text-lg lg:text-xl;
+    }
+  }
+}
