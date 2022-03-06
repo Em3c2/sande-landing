@@ -4,17 +4,24 @@ import Head from 'next/head'
 import Image from '../../components/Image'
 import Navbar from '../../components/Navbar'
 
-const redirect = (destination = '/') => ({ redirect: { destination } });
-const isValidParam = param => true; // TODO develop this validation
-
 const baseUrl = process.env.VERCEL_URL
 
-const getServerSideProps = async (context) => {
+const getStaticPaths = async () => {
+  return {
+    paths: [
+      '/blog/example',
+      '/blog/example2',
+      '/blog/example3',
+    ],
+    fallback: true,
+  }
+}
+
+const getStaticProps = async (context) => {
   const { params: { postId } } = context
+  console.log(context.params, "params")
 
   try {
-    if (!isValidParam(postId)) return redirect()
-
     const endpoint = `${baseUrl}/api/posts/${postId}`
     const response = await fetch(endpoint)
     const postData = await response.json()
@@ -27,12 +34,14 @@ const getServerSideProps = async (context) => {
   }
 
   catch (err) {
-    console.log(err)
-    return redirect()
+    console.log(err, 'error')
+    return {
+      props: {}
+    }
   }
 }
 
-const Post = ({ postData: { content, data } }) => {
+const Post = ({ postData: { content, data = {} } = {} }) => {
   const {
     title,
     img = '/post_images/default.png',
@@ -55,5 +64,6 @@ const Post = ({ postData: { content, data } }) => {
 
 export {
   Post as default,
-  getServerSideProps,
+  getStaticPaths,
+  getStaticProps,
 }

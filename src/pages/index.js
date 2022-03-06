@@ -1,9 +1,12 @@
 import Head from 'next/head'
-import Link from "next/link";
-import SimpleCard from "../components/SimpleCard/";
-import styles from "../styles/home.module.scss";
-import Image from "../components/Image";
+import Link from "next/link"
+import dynamic from 'next/dynamic'
+import styles from "../styles/home.module.scss"
+import Image from "../components/Image"
 import Navbar from '../components/Navbar'
+import Icon from '../components/Icon'
+
+const SimpleCard = dynamic(() => import('../components/SimpleCard/'))
 
 const Home = () => {
   return (
@@ -18,6 +21,7 @@ const Home = () => {
             <Image
               className={styles.background}
               src="/images/cover-home.jpg"
+              blurDataURL="/images/cover-home-small.jpg"
               layout="fill"
               objectFit="cover"
             />
@@ -46,7 +50,7 @@ const Home = () => {
             </div>
             <div className={styles.captionLogo}>
               <div className={styles.logoContainer}>
-                <Image src="/images/logoHome.svg" layout="fill" className={styles.logo} />
+                <Icon id='LogoCover' />
               </div>
             </div>
           </div>

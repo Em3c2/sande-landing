@@ -8,7 +8,8 @@ const PostCart = ({ post }) => {
     author = 'Tomas Sande',
     img = '/post_images/default.png',
     id,
-    description
+    description,
+    time,
   } = post
 
 
@@ -19,7 +20,7 @@ const PostCart = ({ post }) => {
           <Image src={img} className={styles.image} width="550px" height="243px" objectFit="cover" />
           <div className={styles.caption}>
             <div className={styles.reading}>
-              <smal>19' read</smal>
+              <smal>{time}&#39; read</smal>
             </div>
             <small className={styles.author}> Posteado por {author}</small>
             <p className={styles.title}>{title}</p>

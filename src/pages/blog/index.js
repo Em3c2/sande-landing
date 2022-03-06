@@ -40,7 +40,7 @@ const Blog = ({ posts }) => {
         <div className={styles.grid}>
           {
             posts && posts.map(post => (
-              <PostCart post={post} />
+              <PostCart post={post} key={post.id} />
             ))
           }
         </div>
