@@ -1,6 +1,7 @@
 ---
 date: "12-3-22"
 title: "Título de la noticia título largo"
+img: "https://images.unsplash.com/photo-1553272725-086100aecf5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
 description: "Teniendo en cuenta las preferencias y necesidades de nuestros asesorados, pasamos a la etapa de diseño de estrategia y ejecución."
 ---
 

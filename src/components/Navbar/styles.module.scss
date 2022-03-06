@@ -1,5 +1,5 @@
 .navbar {
-  @apply flex justify-between p-8 px-20 z-20;
+  @apply flex justify-between p-8 px-20 z-20 select-none;
   
   .links {
     @apply flex gap-16 lg:gap-24 font-bold;

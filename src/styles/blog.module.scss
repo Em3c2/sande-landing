@@ -1,0 +1,11 @@
+.background {
+  @apply bg-gray-100 rounded-3xl m-8;
+}
+
+.title {
+  @apply font-bold text-center text-5xl pt-16 pb-2 px-4;
+}
+
+.grid {
+  @apply relative w-full flex flex-wrap justify-between p-12 gap-8;
+}

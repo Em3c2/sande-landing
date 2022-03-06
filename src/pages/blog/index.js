@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from '../../components/Navbar'
-import SimpleCard from '../../components/SimpleCard'
+import PostCart from '../../components/PostCart'
+import styles from "../../styles/blog.module.scss";
 
 const redirect = (destination = '/') => ({ redirect: { destination } });
 
@@ -34,14 +35,16 @@ const Blog = ({ posts }) => {
         <title>Blog | Estudio Zande</title>
       </Head>
       <Navbar color="black" />
-      {
-        posts && posts.map(post => (
-          <SimpleCard
-            image={post.img}
-            caption={post.title}
-          />
-        ))
-      }
+      <div className={styles.background}>
+        <h1 className={styles.title}>Bienvenidos a nuestro blog.</h1>
+        <div className={styles.grid}>
+          {
+            posts && posts.map(post => (
+              <PostCart post={post} />
+            ))
+          }
+        </div>
+      </div>
     </main>
   )
 }
