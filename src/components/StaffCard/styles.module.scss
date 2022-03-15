@@ -1,0 +1,18 @@
+.card {
+  @apply overflow-hidden relative h-full m-auto;
+  width: calc(33.333333% - 20px);
+  min-width: 300px;
+  max-width: 545px;
+}
+
+.photo {
+  @apply rounded-3xl;
+}
+
+.name {
+  @apply text-xl font-bold;
+}
+
+.role {
+  @apply text-lg font-bold text-yellow-600 mb-4;
+}

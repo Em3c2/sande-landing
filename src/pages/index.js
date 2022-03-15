@@ -1,12 +1,13 @@
 import Head from 'next/head'
-import Link from "next/link"
+import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import styles from "../styles/home.module.scss"
-import Image from "../components/Image"
+import styles from '../styles/home.module.scss'
+import Image from '../components/Image'
 import Navbar from '../components/Navbar'
 import Icon from '../components/Icon'
 
 const SimpleCard = dynamic(() => import('../components/SimpleCard/'))
+const StaffCard = dynamic(() => import('../components/StaffCard/'))
 
 const Home = () => {
   return (
@@ -73,6 +74,38 @@ const Home = () => {
           image="/images/cardHome4.jpg"
           caption="Desarrollo de Sistemas y Procesos Legales"
         />
+      </section>
+      <section className={styles.staffSection}>
+        <div className={styles.staffCards}>
+          <StaffCard
+            photo="/images/photo-staff-1.jpg"
+            color="#6683bb"
+            name="Tomas Sande"
+            role="Founder"
+            email="tomassande@estudio.com"
+            phone="1111111111"
+
+          />
+          <StaffCard
+            photo="/images/photo-staff-1.jpg"
+            color="#6683bb"
+            name="Tomas Sande"
+            role="Founder"
+            email="tomassande@estudio.com"
+            phone="1111111111"
+
+          />
+          <StaffCard
+            photo="/images/photo-staff-1.jpg"
+            color="#6683bb"
+            name="Tomas Sande"
+            role="Founder"
+            email="tomassande@estudio.com"
+            phone="1111111111"
+          />
+        </div>
+        <button className='btn__blue-filled'>Conocenos</button>
+
       </section>
     </main>
   );

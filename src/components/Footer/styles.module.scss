@@ -1,0 +1,31 @@
+.conteiner {
+  @apply flex justify-between items-center h-72 text-white p-16;
+  background-color: #1f3a6e;
+  line-height: 28px;
+
+  .logoFooter {
+    @apply flex items-center;
+  }
+
+  .sentence {
+    @apply pl-14;
+  }
+  .conteinerContact {
+    @apply flex flex-col;
+
+    .contact {
+      @apply flex items-end flex-col;
+
+      .email {
+        @apply underline underline-offset-1;
+      }
+    }
+    .conteinerSocialMedia {
+      @apply flex justify-end pt-2;
+
+      .boxSocialMedia {
+        @apply w-20 justify-between flex;
+      }
+    }
+  }
+}

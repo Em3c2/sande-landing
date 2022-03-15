@@ -11,6 +11,7 @@ const Image = props => (
   <ImageNext.default {...props}
     blurDataURL={props.blurDataURL || blurDataURL}
     placeholder={props.nolazy || 'blur'}
+    nolazy={undefined}
   />
 )
 
