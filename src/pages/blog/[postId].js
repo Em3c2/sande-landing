@@ -19,7 +19,6 @@ const getStaticPaths = async () => {
 
 const getStaticProps = async (context) => {
   const { params: { postId } } = context
-  console.log(context.params, "params")
 
   try {
     const endpoint = `${baseUrl}/api/posts/${postId}`

@@ -2,7 +2,7 @@ import styles from './styles.module.scss'
 import Image from '../Image'
 import Link from 'next/link'
 
-const PostCart = ({ post }) => {
+const PostCart = ({ className, post }) => {
   const {
     title,
     author = 'Tomas Sande',
@@ -15,7 +15,7 @@ const PostCart = ({ post }) => {
 
   return (
     <Link href={`/blog/${id}`}>
-      <a className={styles.card}>
+      <a className={`${styles.card} ${className}`}>
         <article >
           <Image src={img} className={styles.image} width="550px" height="243px" objectFit="cover" />
           <div className={styles.caption}>

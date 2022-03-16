@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
@@ -7,9 +8,38 @@ import Navbar from '../components/Navbar'
 import Icon from '../components/Icon'
 
 const SimpleCard = dynamic(() => import('../components/SimpleCard/'))
-const StaffCard = dynamic(() => import('../components/StaffCard/'))
+const StaffSection = dynamic(() => import('../components/StaffSection/'))
+const PostCard = dynamic(() => import('../components/PostCart/'))
 
-const Home = () => {
+const getStaticProps = () => {
+  const baseUrl = process.env.VERCEL_URL
+
+  return {
+    props: {
+      baseUrl,
+    }
+  }
+}
+
+const Home = ({ baseUrl }) => {
+  const [posts, setPosts] = useState([{}, {}, {}])
+
+  const getPosts = async () => {
+    try {
+      const endpoint = `${baseUrl}/api/posts/all`
+      const response = await fetch(endpoint)
+      const posts = await response.json()
+
+      setPosts(posts.splice(-3))
+    }
+
+    catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(getPosts, [])
+
   return (
     <main>
       <Head>
@@ -20,6 +50,7 @@ const Home = () => {
         <div className={styles.cover}>
           <div className={styles.backgroundContainer}>
             <Image
+              loading="eager"
               className={styles.background}
               src="/images/cover-home.jpg"
               blurDataURL="/images/cover-home-small.jpg"
@@ -75,40 +106,39 @@ const Home = () => {
           caption="Desarrollo de Sistemas y Procesos Legales"
         />
       </section>
-      <section className={styles.staffSection}>
-        <div className={styles.staffCards}>
-          <StaffCard
-            photo="/images/photo-staff-1.jpg"
-            color="#6683bb"
-            name="Tomas Sande"
-            role="Founder"
-            email="tomassande@estudio.com"
-            phone="1111111111"
-
-          />
-          <StaffCard
-            photo="/images/photo-staff-1.jpg"
-            color="#6683bb"
-            name="Tomas Sande"
-            role="Founder"
-            email="tomassande@estudio.com"
-            phone="1111111111"
-
-          />
-          <StaffCard
-            photo="/images/photo-staff-1.jpg"
-            color="#6683bb"
-            name="Tomas Sande"
-            role="Founder"
-            email="tomassande@estudio.com"
-            phone="1111111111"
-          />
+      <StaffSection />
+      <section
+        className="block md:hidden mt-10"
+      >
+        <Image
+          layout="responsive"
+          width="375"
+          height="250"
+          src="/images/section-quote-home-mobile.png"
+        />
+      </section>
+      <section
+        className="hidden md:block mt-16"
+      >
+        <Image
+          layout="responsive"
+          width="1920"
+          height="804"
+          src="/images/section-quote-home-desktop.png"
+        />
+      </section>
+      <section>
+        <div className={styles.postsContainer}>
+          {posts.map(post => (
+            <PostCard post={post} key={post.id} className="block md:last-of-type:hidden lg:last-of-type:block" />
+          ))}
         </div>
-        <button className='btn__blue-filled'>Conocenos</button>
-
       </section>
     </main>
   );
 };
 
-export default Home;
+export {
+  Home as default,
+  getStaticProps
+} 
