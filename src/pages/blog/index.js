@@ -32,7 +32,7 @@ const Blog = ({ posts }) => {
   return (
     <main>
       <Head>
-        <title>Blog | Estudio Zande</title>
+        <title>Blog | Estudio Sande</title>
       </Head>
       <Navbar color="black" />
       <div className={styles.background}>

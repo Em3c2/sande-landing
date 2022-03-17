@@ -5,7 +5,7 @@ const Servicios = () => {
   return (
     <main>
       <Head>
-        <title>Servicios | Estudio Zande</title>
+        <title>Servicios | Estudio Sande</title>
       </Head>
       <Navbar color="black" />
       <section>

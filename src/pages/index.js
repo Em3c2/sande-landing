@@ -7,9 +7,9 @@ import Image from '../components/Image'
 import Navbar from '../components/Navbar'
 import Icon from '../components/Icon'
 
-const SimpleCard = dynamic(() => import('../components/SimpleCard/'))
-const StaffSection = dynamic(() => import('../components/StaffSection/'))
-const PostCard = dynamic(() => import('../components/PostCart/'))
+const SimpleCard = dynamic(() => import('../components/SimpleCard/'), { loading: () => <p>Loading...</p>, ssr: false })
+const StaffSection = dynamic(() => import('../components/StaffSection/'), { loading: () => <p>Loading...</p>, ssr: false })
+const PostCard = dynamic(() => import('../components/PostCart/'), { loading: () => <p>Loading...</p>, ssr: false })
 
 const getStaticProps = () => {
   const baseUrl = process.env.VERCEL_URL
@@ -38,12 +38,12 @@ const Home = ({ baseUrl }) => {
     }
   }
 
-  useEffect(getPosts, [])
+  useEffect(() => getPosts(), [getPosts])
 
   return (
     <main>
       <Head>
-        <title>Home | Estudio Zande</title>
+        <title>Home | Estudio Sande</title>
       </Head>
       <Navbar color="white" />
       <section>
@@ -76,7 +76,7 @@ const Home = ({ baseUrl }) => {
                 nuestros servicios con la permanente incorporación de nuevas
                 tecnologías.
               </p>
-              <Link href="/blog/example">
+              <Link href="/estudio">
                 <button className={styles.mainButton}>Sobre nosotros</button>
               </Link>
             </div>

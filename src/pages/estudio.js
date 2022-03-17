@@ -9,7 +9,7 @@ const Estudio = () => {
   return (
     <main>
       <Head>
-        <title>Estudio | Estudio Zande</title>
+        <title>Estudio | Estudio Sande</title>
       </Head>
       <Navbar color="black" />
       <Image
