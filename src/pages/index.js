@@ -26,7 +26,7 @@ const Home = ({ baseUrl }) => {
 
   const getPosts = async () => {
     try {
-      const endpoint = `${baseUrl}/api/posts/all`
+      const endpoint = `https://${baseUrl}/api/posts/all`
       const response = await fetch(endpoint)
       const posts = await response.json()
 
