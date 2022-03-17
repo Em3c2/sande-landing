@@ -24,21 +24,23 @@ const getStaticProps = () => {
 const Home = ({ baseUrl }) => {
   const [posts, setPosts] = useState([{}, {}, {}])
 
-  const getPosts = async () => {
-    try {
-      const endpoint = `https://${baseUrl}/api/posts/all`
-      const response = await fetch(endpoint)
-      const posts = await response.json()
+  useEffect(() => {
+    const getPosts = async () => {
+      try {
+        const endpoint = `http://${baseUrl}/api/posts/all`
+        const response = await fetch(endpoint)
+        const posts = await response.json()
 
-      setPosts(posts.splice(-3))
+        setPosts(posts.splice(-3))
+      }
+
+      catch (err) {
+        console.log(err)
+      }
     }
 
-    catch (err) {
-      console.log(err)
-    }
-  }
-
-  useEffect(() => getPosts(), [getPosts])
+    getPosts()
+  }, [])
 
   return (
     <main>

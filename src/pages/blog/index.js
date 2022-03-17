@@ -10,7 +10,7 @@ const baseUrl = process.env.VERCEL_URL
 const getServerSideProps = async () => {
 
   try {
-    const endpoint = `https://${baseUrl}/api/posts/all`
+    const endpoint = `http://${baseUrl}/api/posts/all`
     const response = await fetch(endpoint)
     const posts = await response.json()
 

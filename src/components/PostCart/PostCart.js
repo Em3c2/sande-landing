@@ -20,7 +20,7 @@ const PostCart = ({ className, post }) => {
           <Image src={img} className={styles.image} width="550px" height="243px" objectFit="cover" />
           <div className={styles.caption}>
             <div className={styles.reading}>
-              <smal>{time}&#39; read</smal>
+              <small>{time}&#39; read</small>
             </div>
             <small className={styles.author}> Posteado por {author}</small>
             <p className={styles.title}>{title}</p>

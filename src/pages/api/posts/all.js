@@ -1,8 +1,13 @@
 import contentService from '../../../../services/contentService';
 
 const handler = async ({ query: { postId } }, res) => {
-  const data = await contentService.getAll();
-  res.status(200).json(data);
+  try {
+    const data = await contentService.getAll();
+    res.status(200).json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(200).json({ error });
+  }
 }
 
 export default handler;
