@@ -27,7 +27,8 @@ const getServerSideProps = async () => {
   }
 }
 
-const Blog = ({ posts }) => {
+const Blog = props => {
+  const posts = props.posts ? props.posts : []
 
   return (
     <main>

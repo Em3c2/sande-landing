@@ -8,5 +8,8 @@ module.exports = withMDX({
     domains: [
       "images.unsplash.com"
     ],
+  },
+  serverRuntimeConfig: {
+    PROJECT_ROOT: __dirname
   }
 });

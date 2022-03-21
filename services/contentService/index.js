@@ -1,13 +1,16 @@
 import fs from 'fs'
+import { join } from 'path'
 import { read } from 'gray-matter'
 import { readTime } from '../utils'
+import getConfig from 'next/config'
+const { serverRuntimeConfig } = getConfig()
 
 export default class contentService {
   static async getAll() {
     try {
-      const fileNames = fs.readdirSync('services/_contentService/posts/')
+      const fileNames = fs.readdirSync(join(serverRuntimeConfig.PROJECT_ROOT, 'services/contentService/posts/'))
       const filesData = fileNames.map(name => {
-        const { data, content } = read(`services/_contentService/posts/${name}`)
+        const { data, content } = read(join(serverRuntimeConfig.PROJECT_ROOT, `services/contentService/posts/${name}`))
         return { ...data, id: name.split('.')[0], time: readTime(content) }
       })
 
@@ -20,7 +23,7 @@ export default class contentService {
 
   static async getPost(id) {
     try {
-      const data = read(`services/_contentService/posts/${id}.md`)
+      const data = read(join(serverRuntimeConfig.PROJECT_ROOT, `services/contentService/posts/${id}.md`))
       return Promise.resolve(data)
     }
     catch (err) {
