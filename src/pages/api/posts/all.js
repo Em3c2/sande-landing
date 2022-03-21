@@ -1,4 +1,4 @@
-import contentService from '../../../../services/contentService';
+import contentService from '../../../../services/_contentService';
 
 const handler = async ({ query: { postId } }, res) => {
   try {
