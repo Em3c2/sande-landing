@@ -27,7 +27,7 @@ const Home = ({ baseUrl }) => {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const endpoint = `https://${baseUrl}/api/posts/all`
+        const endpoint = `/api/posts/all`
         const response = await fetch(endpoint)
         const posts = await response.json()
 

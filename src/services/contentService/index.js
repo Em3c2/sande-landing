@@ -8,9 +8,9 @@ const { serverRuntimeConfig } = getConfig()
 export default class contentService {
   static async getAll() {
     try {
-      const fileNames = fs.readdirSync(join(serverRuntimeConfig.PROJECT_ROOT, 'services/contentService/posts/'))
+      const fileNames = fs.readdirSync(join(serverRuntimeConfig.PROJECT_ROOT, 'src/services/contentService/posts/'))
       const filesData = fileNames.map(name => {
-        const { data, content } = read(join(serverRuntimeConfig.PROJECT_ROOT, `services/contentService/posts/${name}`))
+        const { data, content } = read(join(serverRuntimeConfig.PROJECT_ROOT, `src/services/contentService/posts/${name}`))
         return { ...data, id: name.split('.')[0], time: readTime(content) }
       })
 
@@ -23,7 +23,7 @@ export default class contentService {
 
   static async getPost(id) {
     try {
-      const data = read(join(serverRuntimeConfig.PROJECT_ROOT, `services/contentService/posts/${id}.md`))
+      const data = read(join(serverRuntimeConfig.PROJECT_ROOT, `src/services/contentService/posts/${id}.md`))
       return Promise.resolve(data)
     }
     catch (err) {
