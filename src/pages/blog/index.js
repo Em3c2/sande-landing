@@ -10,7 +10,9 @@ import { readTime } from '../../utils'
 import getConfig from 'next/config'
 const { serverRuntimeConfig } = getConfig()
 
-const getServerSideProps = () => {
+const redirect = (destination = '/') => ({ redirect: { destination } })
+
+const getStaticProps = () => {
   try {
     const fileNames = fs.readdirSync(join(serverRuntimeConfig.PROJECT_ROOT, 'public/posts/'))
     const posts = fileNames.map(name => {
@@ -27,10 +29,8 @@ const getServerSideProps = () => {
 
   catch (err) {
     console.log(err)
-    
-    return {
-      props: {},
-    }
+
+    return redirect()
   }
 }
 
@@ -58,5 +58,5 @@ const Blog = ({ posts = [] }) => {
 
 export {
   Blog as default,
-  getServerSideProps,
+  getStaticProps,
 }

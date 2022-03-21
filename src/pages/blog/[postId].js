@@ -4,7 +4,46 @@ import Head from 'next/head'
 import Image from '../../components/Image'
 import Navbar from '../../components/Navbar'
 
-const Post = ({ postData: { content, data = {} } = {} }) => {
+import fs from 'fs'
+import { join } from 'path'
+import { read } from 'gray-matter'
+import getConfig from 'next/config'
+const { serverRuntimeConfig } = getConfig()
+
+const redirect = (destination = '/') => ({ redirect: { destination } })
+
+const getStaticPaths = () => {
+  const fileNames = fs.readdirSync(join(serverRuntimeConfig.PROJECT_ROOT, 'public/posts/'))
+  const paths = fileNames.map(name => `/blog/${name.replace('.mp', '')}`)
+
+  return {
+    paths,
+    fallback: 'blocking',
+  };
+}
+
+const getStaticProps = context => {
+  const { params: { postId } } = context
+
+  try {
+    const { data, content } = read(join(serverRuntimeConfig.PROJECT_ROOT, `public/posts/${postId}.md`))
+
+    return {
+      props: {
+        data,
+        content,
+      },
+    }
+  }
+
+  catch (err) {
+    console.log(err)
+
+    return redirect()
+  }
+}
+
+const Post = ({ data, content }) => {
   const {
     title = "Default Title",
     img = '/post_images/default.png',
@@ -27,4 +66,6 @@ const Post = ({ postData: { content, data = {} } = {} }) => {
 
 export {
   Post as default,
+  getStaticPaths,
+  getStaticProps,
 }
