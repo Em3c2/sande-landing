@@ -5,7 +5,7 @@ import Icon from "../Icon"
 const Navbar = ({ color }) => (
   <nav className={styles.navbar}>
     <Link href="/">
-      <a>
+      <a aria-label="Home">
         <Icon id='LogoNav' color={color} />
       </a>
     </Link>

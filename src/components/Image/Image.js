@@ -12,6 +12,7 @@ const Image = props => (
     blurDataURL={props.blurDataURL || blurDataURL}
     placeholder={props.nolazy || 'blur'}
     nolazy={undefined}
+    alt={props.alt || ''}
   />
 )
 
