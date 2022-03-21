@@ -14,7 +14,7 @@ const redirect = (destination = '/') => ({ redirect: { destination } })
 
 const getStaticPaths = () => {
   const fileNames = fs.readdirSync(join(serverRuntimeConfig.PROJECT_ROOT, 'public/posts/'))
-  const paths = fileNames.map(name => `/blog/${name.replace('.mp', '')}`)
+  const paths = fileNames.map(name => `/blog/${name.replace('.md', '')}`)
 
   return {
     paths,
