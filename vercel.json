@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "src/pages/api/posts/all.js": {
-      "includeFiles": "/posts/**"
-    }
-  }
-}

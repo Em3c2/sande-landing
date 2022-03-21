@@ -3,16 +3,12 @@ import Navbar from '../../components/Navbar'
 import PostCart from '../../components/PostCart'
 import styles from "../../styles/blog.module.scss";
 
-const redirect = (destination = '/') => ({ redirect: { destination } });
-
 const baseUrl = process.env.VERCEL_URL
 
 const getServerSideProps = async () => {
 
   try {
-    const endpoint = `/api/posts/all`
-    const response = await fetch(endpoint)
-    const posts = await response.json()
+    // CODE
 
     return {
       props: {
@@ -23,7 +19,6 @@ const getServerSideProps = async () => {
 
   catch (err) {
     console.log(err)
-    return redirect()
   }
 }
 

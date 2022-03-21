@@ -22,12 +22,12 @@ const getStaticProps = () => {
 }
 
 const Home = ({ baseUrl }) => {
-  const [posts, setPosts] = useState([{}, {}, {}])
+  const [posts, setPosts] = useState([{ id: 1 }, { id: 2 }, { id: 3 }])
 
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const endpoint = `/api/posts/all`
+        const endpoint = `https://${baseUrl}/api/posts/all`
         const response = await fetch(endpoint)
         const posts = await response.json()
 
