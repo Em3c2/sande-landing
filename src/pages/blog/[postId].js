@@ -4,45 +4,9 @@ import Head from 'next/head'
 import Image from '../../components/Image'
 import Navbar from '../../components/Navbar'
 
-const baseUrl = process.env.VERCEL_URL
-
-const getStaticPaths = async () => {
-  return {
-    paths: [
-      '/blog/example',
-      '/blog/example2',
-      '/blog/example3',
-    ],
-    fallback: true,
-  }
-}
-
-const getStaticProps = async (context) => {
-  const { params: { postId } } = context
-
-  try {
-    const endpoint = `/api/posts/${postId}`
-    const response = await fetch(endpoint)
-    const postData = await response.json()
-
-    return {
-      props: {
-        postData,
-      },
-    }
-  }
-
-  catch (err) {
-    console.log(err, 'error')
-    return {
-      props: {}
-    }
-  }
-}
-
 const Post = ({ postData: { content, data = {} } = {} }) => {
   const {
-    title,
+    title = "Default Title",
     img = '/post_images/default.png',
   } = data;
 
@@ -63,6 +27,4 @@ const Post = ({ postData: { content, data = {} } = {} }) => {
 
 export {
   Post as default,
-  getStaticPaths,
-  getStaticProps,
 }

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
@@ -7,40 +6,42 @@ import Image from '../components/Image'
 import Navbar from '../components/Navbar'
 import Icon from '../components/Icon'
 
+import fs from 'fs'
+import { join } from 'path'
+import { read } from 'gray-matter'
+import { readTime } from '../utils'
+import getConfig from 'next/config'
+const { serverRuntimeConfig } = getConfig()
+
 const SimpleCard = dynamic(() => import('../components/SimpleCard/'), { loading: () => <p>Loading...</p>, ssr: false })
 const StaffSection = dynamic(() => import('../components/StaffSection/'), { loading: () => <p>Loading...</p>, ssr: false })
 const PostCard = dynamic(() => import('../components/PostCart/'), { loading: () => <p>Loading...</p>, ssr: false })
 
 const getStaticProps = () => {
-  const baseUrl = process.env.VERCEL_URL
+  try {
+    const fileNames = fs.readdirSync(join(serverRuntimeConfig.PROJECT_ROOT, 'public/posts/'))
+    const posts = fileNames.map(name => {
+      const { data, content } = read(join(serverRuntimeConfig.PROJECT_ROOT, `public/posts/${name}`))
+      return { ...data, id: name.split('.')[0], time: readTime(content) }
+    })
 
-  return {
-    props: {
-      baseUrl,
+    return {
+      props: {
+        posts: posts.splice(-3),
+      },
+    }
+  }
+
+  catch (err) {
+    console.log(err)
+    
+    return {
+      props: {},
     }
   }
 }
 
-const Home = ({ baseUrl }) => {
-  const [posts, setPosts] = useState([{ id: 1 }, { id: 2 }, { id: 3 }])
-
-  useEffect(() => {
-    const getPosts = async () => {
-      try {
-        const endpoint = `https://${baseUrl}/api/posts/all`
-        const response = await fetch(endpoint)
-        const posts = await response.json()
-
-        setPosts(posts.splice(-3))
-      }
-
-      catch (err) {
-        console.log(err)
-      }
-    }
-
-    getPosts()
-  }, [])
+const Home = ({ posts = [] }) => {
 
   return (
     <main>

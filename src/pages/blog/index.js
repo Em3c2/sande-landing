@@ -3,12 +3,20 @@ import Navbar from '../../components/Navbar'
 import PostCart from '../../components/PostCart'
 import styles from "../../styles/blog.module.scss";
 
-const baseUrl = process.env.VERCEL_URL
+import fs from 'fs'
+import { join } from 'path'
+import { read } from 'gray-matter'
+import { readTime } from '../../utils'
+import getConfig from 'next/config'
+const { serverRuntimeConfig } = getConfig()
 
-const getServerSideProps = async () => {
-
+const getServerSideProps = () => {
   try {
-    // CODE
+    const fileNames = fs.readdirSync(join(serverRuntimeConfig.PROJECT_ROOT, 'public/posts/'))
+    const posts = fileNames.map(name => {
+      const { data, content } = read(join(serverRuntimeConfig.PROJECT_ROOT, `public/posts/${name}`))
+      return { ...data, id: name.split('.')[0], time: readTime(content) }
+    })
 
     return {
       props: {
@@ -19,11 +27,14 @@ const getServerSideProps = async () => {
 
   catch (err) {
     console.log(err)
+    
+    return {
+      props: {},
+    }
   }
 }
 
-const Blog = props => {
-  const posts = props.posts ? props.posts : []
+const Blog = ({ posts = [] }) => {
 
   return (
     <main>
