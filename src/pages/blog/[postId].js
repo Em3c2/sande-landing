@@ -21,7 +21,7 @@ const getStaticProps = async (context) => {
   const { params: { postId } } = context
 
   try {
-    const endpoint = `http://${baseUrl}/api/posts/${postId}`
+    const endpoint = `https://${baseUrl}/api/posts/${postId}`
     const response = await fetch(endpoint)
     const postData = await response.json()
 
