@@ -1,8 +1,14 @@
 .navbar {
-  @apply flex justify-between p-8 px-20 z-20 select-none;
-  
+  @apply flex justify-between pl-8 py-8 lg:p-8 lg:px-20 z-20 select-none;
+
+  .logo {
+    svg {
+      @apply w-72 xl:w-auto m-auto lg:mr-16;
+    }
+  }
+
   .links {
-    @apply flex gap-16 lg:gap-24 font-bold;
+    @apply hidden lg:flex gap-2 lg:gap-8 xl:gap-16 font-bold;
 
     li {
       @apply border-b-2 border-transparent hover:border-current transition-all text-lg lg:text-xl;

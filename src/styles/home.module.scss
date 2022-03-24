@@ -1,13 +1,16 @@
 .cover {
-  @apply p-12 flex flex-col items-start justify-center m-auto gap-5;
+  @apply p-8 lg:p-12 flex flex-col items-start justify-center m-auto gap-5 overflow-hidden;
 
   .title {
-    @apply text-5xl max-w-xl z-10 font-bold text-white pb-3 pt-8;
-    line-height: 61px;
+    @apply text-2xl w-full lg:text-5xl lg:max-w-xl z-10 font-bold text-white pb-3 lg:pt-8;
+
+    @media (min-width: 1024px) {
+      line-height: 61px;
+    }
   }
 
   .mainConteiner {
-    @apply flex justify-between items-center w-full ml-8 min-w-max;
+    @apply flex justify-between items-center w-full lg:ml-8 min-w-max;
   }
 
   .mainParagraph {
@@ -30,15 +33,19 @@
   }
 
   .caption {
-    @apply min-w-fit;
+    width: calc(100vw - 5rem);
+    
+    @media (min-width: 1024px) {
+      @apply w-auto lg:min-w-fit;
+    }
   }
 
   .captionLogo {
-    @apply w-full grid place-items-center -mt-20 pointer-events-none select-none;
+    @apply w-full hidden lg:grid place-items-center -mt-20 pointer-events-none select-none;
   }
 
   .logoContainer {
-    @apply relative lg:m-5 w-0 lg:w-60 xl:w-80;
+    @apply hidden lg:block relative lg:m-5 w-0 lg:w-60 xl:w-80;
     height: 420px;
   }
 }
@@ -48,5 +55,5 @@
 }
 
 .postsContainer {
-  @apply relative w-full flex flex-col items-center p-12 gap-8 m-auto md:flex-row lg:justify-between;
+  @apply relative w-full flex flex-col items-center p-8 lg:p-12 gap-8 m-auto md:flex-row lg:justify-between;
 }

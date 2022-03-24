@@ -44,7 +44,7 @@ const getStaticProps = () => {
 const Home = ({ posts = [] }) => {
 
   return (
-    <main>
+    <main className='overflow-hidden'>
       <Head>
         <title>Home | Estudio Sande</title>
       </Head>
