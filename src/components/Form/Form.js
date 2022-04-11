@@ -81,7 +81,7 @@ return (
           className={styles.button}>
           {submiting ? <Spinner /> : 'Enviar'}
         </button>
-        <p className='h-3 text-yellow-200 text-lg align-middle my-5'>{error ? error : ' '}</p>
+        <p className='h-3 text-yellow-200 text-lg align-middle my-5 select-none'>{error ? error : ' '}</p>
       </form>
     </div>
   </div>
