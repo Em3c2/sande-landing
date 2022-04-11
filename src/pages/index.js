@@ -1,21 +1,22 @@
+import fs from 'fs'
 import Head from 'next/head'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import { join } from 'path'
+import { read } from 'gray-matter'
+import { readTime } from '../utils'
+import getConfig from 'next/config'
 import styles from '../styles/home.module.scss'
 import Image from '../components/Image'
 import Navbar from '../components/Navbar'
 import Icon from '../components/Icon'
 
-import fs from 'fs'
-import { join } from 'path'
-import { read } from 'gray-matter'
-import { readTime } from '../utils'
-import getConfig from 'next/config'
 const { serverRuntimeConfig } = getConfig()
 
-const SimpleCard = dynamic(() => import('../components/SimpleCard/'), { loading: () => <p>Loading...</p>, ssr: false })
-const StaffSection = dynamic(() => import('../components/StaffSection/'), { loading: () => <p>Loading...</p>, ssr: false })
-const PostCard = dynamic(() => import('../components/PostCart/'), { loading: () => <p>Loading...</p>, ssr: false })
+const SimpleCard = dynamic(() => import('../components/SimpleCard/'), { loading: () => <p>Loading...</p> })
+const StaffSection = dynamic(() => import('../components/StaffSection/'), { loading: () => <p>Loading...</p> })
+const PostCard = dynamic(() => import('../components/PostCart/'), { loading: () => <p>Loading...</p> })
+const Form = dynamic(() => import('../components/Form'), { loading: () => <p>Loading...</p> })
 
 const getStaticProps = () => {
   try {
@@ -136,6 +137,9 @@ const Home = ({ posts = [] }) => {
             <PostCard post={post} key={post.id} className="block md:last-of-type:hidden lg:last-of-type:block" />
           ))}
         </div>
+      </section>
+      <section>
+        <Form />
       </section>
     </main>
   );

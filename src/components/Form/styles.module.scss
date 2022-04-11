@@ -1,0 +1,41 @@
+.container {
+  @apply flex flex-col h-fit relative lg:flex-row overflow-hidden;
+  background-color: #11205b;
+
+  .image {
+    &__mobile {
+      @apply block lg:hidden w-full;
+    }
+
+    &__desktop {
+      @apply h-full w-full -mb-2 hidden lg:block;
+      max-width: 45vw;
+      background-color: #11205b;
+    }
+  }
+
+  .containerForm {
+    @apply flex flex-col justify-center w-full m-auto py-12 px-8 lg:py-0;
+    max-width: 43.75rem;
+
+    .contact {
+      @apply text-5xl text-white font-bold tracking-wide mb-9;
+    }
+
+    .form {
+      @apply flex flex-col;
+
+      .input {
+        @apply rounded-2xl text-black placeholder:text-black h-16 mb-5 pl-5 hover:bg-sky-100 outline-amber-900;
+      }
+
+      textarea.input {
+        @apply pt-4 h-36;
+      }
+
+      .button {
+        @apply flex items-center h-12 px-10 font-bold text-xl border border-solid rounded-full bg-blue-900 text-white w-36 ml-auto lg:-mt-10 hover:bg-white hover:text-blue-900 select-none;
+      }
+    }
+  }
+}

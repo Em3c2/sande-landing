@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Navbar from '../../components/Navbar'
 import PostCart from '../../components/PostCart'
 import styles from "../../styles/blog.module.scss";
+import SimpleHeader from '../../components/SimpleHeader';
 
 import fs from 'fs'
 import { join } from 'path'
@@ -42,8 +43,11 @@ const Blog = ({ posts = [] }) => {
         <title>Blog | Estudio Sande</title>
       </Head>
       <Navbar color="black" />
+      <SimpleHeader 
+          className="mb-24"
+          title="Bienvenidos a nuestro blog"
+        />
       <div className={styles.background}>
-        <h1 className={styles.title}>Bienvenidos a nuestro blog.</h1>
         <div className={styles.grid}>
           {
             posts && posts.map(post => (

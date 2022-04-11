@@ -1,5 +1,7 @@
-import Head from 'next/head'
-import Navbar from '../components/Navbar'
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import Form from '../components/Form';
+import SimpleHeader from '../components/SimpleHeader';
 
 const Contacto = () => {
   return (
@@ -9,7 +11,11 @@ const Contacto = () => {
       </Head>
       <Navbar color="black" />
       <section>
-        
+        <SimpleHeader 
+          title="Contactanos"
+          className="mb-24"
+        />
+        <Form />
       </section>
     </main>
   );

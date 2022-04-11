@@ -12,6 +12,11 @@
   margin: 0;
 }
 
+iframe {
+  @apply m-8 lg:m-auto;
+  max-width: calc(100vw - 4rem);
+}
+
 .nav-text-white {
   @apply text-white;
 }
