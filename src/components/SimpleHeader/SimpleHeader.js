@@ -6,10 +6,11 @@ const SimpleHeader = ({ title, image, transparent = false, className }) => (
       <Image
         loading="eager"
         src={image}
-        height="948"
-        width="1920"
+        height="70h"
+        width="100w"
         className="h-screen"
         objectFit="cover"
+        layout="responsive"
       />
     }
     <div className="-mt-2 h-24 w-44 m-auto overflow-hidden" >

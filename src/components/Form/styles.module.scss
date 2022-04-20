@@ -26,15 +26,15 @@
       @apply flex flex-col;
 
       .input {
-        @apply rounded-2xl text-black placeholder:text-black h-16 mb-5 pl-5 hover:bg-sky-100 outline-amber-900;
+        @apply rounded-2xl text-black placeholder:text-gray-800 h-16 mb-5 pl-5 hover:bg-sky-100 outline-amber-900;
       }
 
       textarea.input {
-        @apply pt-4 h-36;
+        @apply pt-4 h-36 lg:rounded-br-3xl resize-none;
       }
 
       .button {
-        @apply flex items-center h-12 px-10 font-bold text-xl border border-solid rounded-full bg-blue-900 text-white w-36 ml-auto lg:-mt-10 hover:bg-white hover:text-blue-900 select-none;
+        @apply flex items-center h-12 px-10 font-bold text-xl border border-solid rounded-full bg-blue-900 text-white w-36 ml-auto lg:-mt-20 lg:mr-3 hover:bg-white hover:text-blue-900 select-none;
       }
     }
   }

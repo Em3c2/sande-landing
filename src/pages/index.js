@@ -147,7 +147,7 @@ const Home = ({ posts = [] }) => {
             <PostCard post={post} key={post.id} className="block md:last-of-type:hidden lg:last-of-type:block" />
           ))}
         </div>
-        <button className='btn__blue'>Ir al blog</button>
+        <button className='btn__blue m-auto'>Ir al blog</button>
       </section>
       <section>
         <Form />
