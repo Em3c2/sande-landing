@@ -1,17 +1,21 @@
 import Image from '../Image'
+import styles from './styles.module.scss'
 
 const SimpleHeader = ({ title, image, transparent = false, className }) => (
-  <header className={className}>
+  <header className={`${className} ${styles.header}`}>
     {image &&
-      <Image
-        loading="eager"
-        src={image}
-        height="70h"
-        width="100w"
-        className="h-screen"
-        objectFit="cover"
-        layout="responsive"
-      />
+      <div
+        className={styles.image}
+      >
+        <Image
+          loading="eager"
+          src={image}
+          height="948"
+          width="1920"
+          objectFit="cover"
+          layout="responsive"
+        />
+      </div>
     }
     <div className="-mt-2 h-24 w-44 m-auto overflow-hidden" >
       <div className={`h-44 w-44 -mt-24 m-auto rounded-full bg-blue-900 ${transparent ? 'bg-transparent' : ''}`} />
