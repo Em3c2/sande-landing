@@ -10,6 +10,7 @@ import styles from '../styles/home.module.scss'
 import Image from '../components/Image'
 import Navbar from '../components/Navbar'
 import Icon from '../components/Icon'
+import ProcessSection from '../components/ProcessSection'
 
 const { serverRuntimeConfig } = getConfig()
 
@@ -35,7 +36,7 @@ const getStaticProps = () => {
 
   catch (err) {
     console.log(err)
-    
+
     return {
       props: {},
     }
@@ -110,7 +111,12 @@ const Home = ({ posts = [] }) => {
           caption="Desarrollo de Sistemas y Procesos Legales"
         />
       </section>
-      <StaffSection />
+      <section>
+        <ProcessSection
+          title="Sobre nosotros."
+          caption="Nuestro proceso"
+        />
+      </section>
       <section
         className="block md:hidden mt-10"
       >
@@ -131,12 +137,17 @@ const Home = ({ posts = [] }) => {
           src="/images/section-quote-home-desktop.png"
         />
       </section>
-      <section>
+
+      <StaffSection />
+
+      <section className={styles.postsSection}>
+        <h2>Nuestro blog</h2>
         <div className={styles.postsContainer}>
           {posts.map(post => (
             <PostCard post={post} key={post.id} className="block md:last-of-type:hidden lg:last-of-type:block" />
           ))}
         </div>
+        <button className='btn__blue'>Ir al blog</button>
       </section>
       <section>
         <Form />
@@ -148,4 +159,4 @@ const Home = ({ posts = [] }) => {
 export {
   Home as default,
   getStaticProps
-} 
+};

@@ -1,0 +1,19 @@
+.numberFragment {
+  @apply font-semibold -mt-4 mb-5 lg:mt-11 lg:mb-auto;
+  color: #c09770;
+}
+
+.subtitleFragment {
+  @apply font-bold text-2xl;
+}
+
+.circleFragment {
+  @apply w-2 h-2 lg:w-4 lg:h-4 -ml-6 lg:ml-0 rounded-full z-10;
+  background-color: #c09770;
+}
+
+.paragraph {
+  @apply lg:text-lg xl:text-xl font-normal mb-12 lg:mb-auto;
+  line-height: 34px;
+  max-width: 534px;
+}

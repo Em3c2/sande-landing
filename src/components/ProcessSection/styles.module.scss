@@ -1,0 +1,22 @@
+.container {
+  @apply flex flex-col p-6 lg:p-12 m-6 lg:m-16 bg-gray-100 rounded-3xl;
+
+  .title {
+    @apply text-5xl font-bold;
+  }
+  h3 {
+    @apply font-semibold text-2xl mt-2 mb-20;
+  }
+
+  .wrapper {
+    @apply flex flex-row lg:flex-col h-full relative;
+
+    .lineFragment {
+      @apply border border-b-orange-200 border-r-orange-200 mr-5 lg:mr-auto lg:-mb-2 lg:w-full;
+    }
+
+    .containerFragment {
+      @apply flex justify-between z-10 flex-col lg:flex-row;
+    }
+  }
+}

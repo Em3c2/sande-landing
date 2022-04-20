@@ -34,7 +34,7 @@
 
   .caption {
     width: calc(100vw - 5rem);
-    
+
     @media (min-width: 1024px) {
       @apply w-auto min-w-fit;
     }
@@ -52,6 +52,14 @@
 
 .cardsConteiner {
   @apply flex justify-evenly flex-wrap mt-16 gap-10 px-8 md:px-0;
+}
+
+.postsSection {
+  @apply bg-gray-100 rounded-3xl justify-between flex-wrap items-center gap-4 p-4 py-7 mx-7 mb-6;
+  background: linear-gradient(93.21deg, #f6f6fb 2.88%, #f9f9f9 93.14%);
+  h2 {
+    @apply flex justify-center text-5xl font-bold;
+  }
 }
 
 .postsContainer {
