@@ -9,7 +9,7 @@ const Navbar = ({ color }) => (
         <Icon id='LogoNav' color={color} />
       </a>
     </Link>
-    <ul className={`${styles.links} nav-text-${color}`}>
+    <ul className={`${styles.links} ${color === 'white' ? 'text-white' : 'text-black'}`}>
       <li>
         <Link href="/">Home</Link>
       </li>

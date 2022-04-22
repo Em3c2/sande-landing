@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic';
-import Navbar from '../components/Navbar'
-import SimpleHeader from '../components/SimpleHeader';
+import Navbar from '../../components/Navbar'
+import SimpleHeader from '../../components/SimpleHeader';
+import styles from './styles.module.scss';
 
-const StaffSection = dynamic(() => import('../components/StaffSection/'))
+const StaffSection = dynamic(() => import('../../components/StaffSection/'))
 
 const Estudio = () => {
   return (

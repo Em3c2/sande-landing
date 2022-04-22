@@ -33,59 +33,69 @@ const Form = () => {
   };
 
   const postForm = data => {
-    window.setTimeout(() => {
+
+    fetch('/api/form', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then(() => {
       setSubmiting(false);
       setFormData(emptyForm);
-      console.log(data);
-    }, 2000);
+    }).catch(err => {
+      console.log(err);
+      setSubmiting(false);
+    });
   };
 
-const handleSubmit = async event => {
-  event.preventDefault();
+  const handleSubmit = async event => {
+    event.preventDefault();
 
-  if (submiting) return;
-  setSubmiting(true)
+    if (submiting) return;
+    setSubmiting(true)
 
-  verifyInputs(formData)
-    .then(res => {
-      postForm(res)
-    })
-    .catch(err => {
-      setSubmiting(false)
-      setError(err)
-    })
-};
+    verifyInputs(formData)
+      .then(res => {
+        postForm(res)
+      })
+      .catch(err => {
+        setSubmiting(false)
+        setError(err)
+      })
+  };
 
-const handleInput = ({ target: { name, value } }) => {
-  if (submiting) return;
-  setError(null);
+  const handleInput = ({ target: { name, value } }) => {
+    if (submiting) return;
+    setError(null);
 
-  setFormData(formData => ({ ...formData, ...{ [name]: value } }));
-};
+    setFormData(formData => ({ ...formData, ...{ [name]: value } }));
+  };
 
-return (
-  <div className={styles.container}>
-    <div className={styles.image__desktop}>
-      <Image src="/images/rombo.png" width="780" height="785" />
+  return (
+    <div className={styles.container}>
+      <div className={styles.image__desktop}>
+        <Image src="/images/rombo.png" width="780" height="785" />
+      </div>
+      <div className={styles.image__mobile}>
+        <Image src="/images/rombo-mobile.png" layout="responsive" width="375" height="187" />
+      </div>
+      <div className={styles.containerForm}>
+        <h3 className={styles.contact}>Contactanos</h3>
+        <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
+          <input type="text" name="name" placeholder="Nombre y apellido" onInput={handleInput} value={formData.name} className={styles.input}></input>
+          <input type="text" name="email" placeholder="Email" onInput={handleInput} value={formData.email} className={styles.input}></input>
+          <textarea name="message" placeholder="Contanos sobre..." onInput={handleInput} value={formData.message} className={styles.input}></textarea>
+          <button
+            className={styles.button}>
+            {submiting ? <Spinner /> : 'Enviar'}
+          </button>
+          <p className='h-3 text-yellow-200 text-lg align-middle my-5 select-none'>{error ? error : ' '}</p>
+        </form>
+      </div>
     </div>
-    <div className={styles.image__mobile}>
-      <Image src="/images/rombo-mobile.png" layout="responsive" width="375" height="187" />
-    </div>
-    <div className={styles.containerForm}>
-      <h3 className={styles.contact}>Contactanos</h3>
-      <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
-        <input type="text" name="name" placeholder="Nombre y apellido" onInput={handleInput} value={formData.name} className={styles.input}></input>
-        <input type="text" name="email" placeholder="Email" onInput={handleInput} value={formData.email} className={styles.input}></input>
-        <textarea name="message" placeholder="Contanos sobre..." onInput={handleInput} value={formData.message} className={styles.input}></textarea>
-        <button
-          className={styles.button}>
-          {submiting ? <Spinner /> : 'Enviar'}
-        </button>
-        <p className='h-3 text-yellow-200 text-lg align-middle my-5 select-none'>{error ? error : ' '}</p>
-      </form>
-    </div>
-  </div>
-)
+  )
 }
 
 export default Form; 

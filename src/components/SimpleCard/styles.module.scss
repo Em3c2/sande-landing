@@ -1,5 +1,5 @@
 .card {
-  @apply rounded-3xl overflow-hidden relative font-semibold text-xl bg-white w-full; 
+  @apply rounded-3xl overflow-hidden relative font-semibold text-lg md:text-xl lg:text-lg xl:text-xl bg-white w-full; 
   min-height: 19rem;
   box-shadow: 0px 6.15603px 30.7801px rgba(132, 145, 170, 0.19);
   max-width: 376px;
@@ -11,8 +11,13 @@
   @media (min-width: 1024px) {
     width: calc(25% - 2.5rem);
   }
+
+  .image {
+    min-height: 58%;
+    position: relative;
+  }
 }
 
 .content {
-  padding: 20px 80px 20px 35px;
+  @apply p-3 md:p-5 lg:p-2 xl:p-5;
 }

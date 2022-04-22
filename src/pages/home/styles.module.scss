@@ -51,7 +51,8 @@
 }
 
 .cardsConteiner {
-  @apply flex justify-evenly flex-wrap mt-16 gap-10 px-8 md:px-0;
+  @apply flex justify-evenly flex-wrap gap-10 px-8 md:px-0;
+  margin-top: 65px;
 }
 
 .postsSection {

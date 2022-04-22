@@ -6,11 +6,34 @@ import fs from 'fs'
 import { join } from 'path'
 import { read } from 'gray-matter'
 import getConfig from 'next/config'
+import { redirect } from '../../utils'
+import styles from './post.module.scss'
 
 const { serverRuntimeConfig } = getConfig()
 const Markdown = dynamic(() => import('../../components/Markdown'), { loading: () => <p>Loading...</p> })
 
-const redirect = (destination = '/') => ({ redirect: { destination } })
+const Post = ({ data, content }) => {
+  const {
+    title = "Default Title",
+    img = '/post_images/default.png',
+  } = data;
+
+  return (
+    <main className={styles.post}>
+      <Navbar color="black" />
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div className='py-12 px-8 text-justify flex flex-col items-center justify-center m-auto gap-5'>
+        <h1 className='text-5xl text-bold text-red-800 mb-10'>{title}</h1>
+        <div className="max-w-5xl w-full">
+          <Image src={img} layout="responsive" width="800" height="350" />
+        </div>
+        <Markdown className='prose max-w-5xl w-full' content={content} />
+      </div>
+    </main>
+  )
+}
 
 const getStaticPaths = () => {
   const fileNames = fs.readdirSync(join(serverRuntimeConfig.PROJECT_ROOT, 'public/posts/'))
@@ -38,32 +61,8 @@ const getStaticProps = context => {
 
   catch (err) {
     console.log(err)
-
     return redirect()
   }
-}
-
-const Post = ({ data, content }) => {
-  const {
-    title = "Default Title",
-    img = '/post_images/default.png',
-  } = data;
-
-  return (
-    <main>
-      <Navbar color="black" />
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <div className='py-12 px-8 text-justify flex flex-col items-center justify-center m-auto gap-5'>
-        <h1 className='text-5xl text-bold text-red-800 mb-10'>{title}</h1>
-        <div className="max-w-5xl w-full">
-          <Image src={img} layout="responsive" width="800" height="350" />
-        </div>
-        <Markdown className='prose max-w-5xl w-full' content={content} />
-      </div>
-    </main>
-  )
 }
 
 export {

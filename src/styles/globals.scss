@@ -13,28 +13,22 @@
 }
 
 iframe {
-  @apply m-8 lg:m-auto;
-  max-width: calc(100vw - 4rem);
+  @apply m-0 lg:m-auto;
+  max-width: calc(100vw - 5rem);
 }
 
-.nav-text-white {
-  @apply text-white;
-}
+@layer components {
+  .btn {
+    &__white {
+      @apply mt-10 py-2 px-5 font-bold text-xl border border-solid text-white border-white rounded-full hover:bg-white hover:text-amber-900;
+    }
 
-.nav-text-black {
-  @apply text-black;
-}
+    &__blue-filled {
+      @apply mt-10 py-2 px-10 font-bold text-xl border border-solid rounded-full bg-blue-900 text-white hover:text-blue-900 hover:border-blue-900 hover:bg-transparent;
+    }
 
-.btn {
-  &__white {
-    @apply mt-10 py-2 px-5 font-bold text-xl border border-solid text-white border-white rounded-full hover:bg-white hover:text-amber-900;
-  }
-
-  &__blue-filled {
-    @apply mt-10 py-2 px-10 font-bold text-xl border border-solid rounded-full bg-blue-900 text-white hover:text-blue-900 hover:border-blue-900 hover:bg-transparent  ;
-  }
-
-  &__blue {
-    @apply mt-10 py-2 px-10 font-bold text-xl border border-solid text-blue-900 border-blue-900 rounded-full hover:bg-blue-900 hover:text-white;
+    &__blue {
+      @apply mt-10 py-2 px-10 font-bold text-xl border border-solid text-blue-900 border-blue-900 rounded-full hover:bg-blue-900 hover:text-white;
+    }
   }
 }

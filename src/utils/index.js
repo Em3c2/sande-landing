@@ -26,6 +26,9 @@ const readTime = content => {
   return minutes;
 }
 
+const redirect = (destination = '/') => ({ redirect: { destination } });
+
 export {
   readTime,
+  redirect,
 };
