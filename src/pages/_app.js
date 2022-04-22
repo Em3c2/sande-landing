@@ -1,9 +1,11 @@
 import "../styles/globals.scss";
 import Footer from "../components/Footer";
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Script src="/pace.min.js" />
       <Component {...pageProps} />
       <Footer
         sentence="Todos los derechos reservados."
