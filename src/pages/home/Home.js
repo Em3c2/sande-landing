@@ -21,11 +21,12 @@ const { serverRuntimeConfig } = getConfig()
 
 const Home = ({ posts = [] }) => {
   return (
-    <main className='overflow-hidden'>
+    <div className='overflow-hidden' id="outer-container">
       <Head>
         <title>Home | Estudio Sande</title>
       </Head>
       <Navbar color="white" />
+      <main id="page-wrap">
       <section>
         <div className={styles.cover}>
           <div className={styles.backgroundContainer}>
@@ -128,6 +129,7 @@ const Home = ({ posts = [] }) => {
         <Form />
       </section>
     </main>
+    </div>
   );
 };
 

@@ -1,5 +1,9 @@
 .image {
   @apply overflow-hidden;
-  width: calc(100vw - 17px);
-  max-height: calc(100vh - 200px);
+
+
+  @media (min-width: 1024px) {
+    width: calc(100vw - 17px);
+    max-height: calc(100vh - 200px);
+  }
 }
