@@ -1,3 +1,1 @@
-import Component from "./Estudio";
-
-export default Component;
+module.exports = require('./Estudio');

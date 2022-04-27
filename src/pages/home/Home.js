@@ -29,6 +29,16 @@ const Home = ({ posts = [] }) => {
       <main id="page-wrap">
       <section>
         <div className={styles.cover}>
+          <div className={styles.backgroundContainerMobile}>
+            <Image
+              loading="eager"
+              className={styles.background}
+              src="/images/cover-mobile.png"
+              blurDataURL="/images/cover-mobile.png"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
           <div className={styles.backgroundContainer}>
             <Image
               loading="eager"

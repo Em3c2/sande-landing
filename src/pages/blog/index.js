@@ -1,3 +1,1 @@
-const Component = require('./Blog');
-
-module.exports = Component;
+module.exports = require('./Blog');

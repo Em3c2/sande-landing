@@ -3,6 +3,7 @@ import LogoNav from './icons/LogoNav';
 import LogoFooter from './icons/LogoFooter';
 import Facebook from './icons/Facebook';
 import Linkedin from './icons/Linkedin';
+import CloseButton from './icons/CloseButton';
 
 const ICONS = {
   LogoCover,
@@ -10,6 +11,7 @@ const ICONS = {
   LogoFooter,
   Facebook,
   Linkedin,
+  CloseButton,
 };
 
 const Icon = props => {

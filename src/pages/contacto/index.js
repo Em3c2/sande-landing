@@ -1,3 +1,1 @@
-const Component = require('./Contacto');
-
-module.exports = Component;
+module.exports = require('./Contacto');

@@ -1,27 +1,41 @@
 .conteiner {
-  @apply flex justify-between items-center h-72 text-white p-16 overflow-hidden;
+  @apply flex justify-between flex-col lg:flex-row lg:items-center lg:h-72 text-white p-8 lg:p-16;
   background-color: #1f3a6e;
   line-height: 28px;
 
-  .logoFooter {
-    @apply flex items-center;
+  .logosContainer {
+    @apply flex justify-end lg:justify-start items-center lg:h-full flex-row-reverse lg:flex-row;
+
+    &>svg {
+      @apply hidden h-0 lg:h-auto lg:block;
+    }
+
+    .logoAndCaption {
+      @apply flex flex-col items-start justify-around lg:ml-10 lg:h-1/2;
+
+      svg {
+        max-width: calc(100vw - 64px);
+      }
+
+      p {
+        @apply py-2 mb-10 text-xs lg:text-base lg:mb-0 lg:p-0;
+      }
+    }
   }
 
-  .sentence {
-    @apply pl-14;
-  }
   .conteinerContact {
-    @apply flex flex-col;
+    @apply flex flex-col-reverse lg:flex-col;
 
     .contact {
-      @apply flex items-end flex-col;
+      @apply flex items-start lg:items-end flex-col;
 
       .email {
         @apply underline underline-offset-1;
       }
     }
+
     .conteinerSocialMedia {
-      @apply flex justify-end pt-2;
+      @apply flex justify-start lg:justify-end py-2;
 
       .boxSocialMedia {
         @apply w-20 justify-between flex;

@@ -21,6 +21,10 @@
   height: 59px;
 
   > svg {
-    @apply absolute w-1/2 right-12 top-5;
-  }   
+    @apply absolute w-1/2 right-6 top-5;
+  }
+
+  .linksListMobile li {
+    @apply border-gray-200 font-bold border-t last:border-b py-4 px-6 active:bg-gray-200 select-none;
+  } 
 }

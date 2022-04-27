@@ -1,5 +1,5 @@
 .cover {
-  @apply p-8 lg:p-12 flex flex-col items-start justify-center m-auto gap-5 overflow-hidden;
+  @apply p-8 lg:p-12 flex relative lg:static flex-col items-start justify-center m-auto gap-5 overflow-hidden;
 
   .title {
     @apply text-2xl w-full lg:text-5xl lg:max-w-xl z-10 font-bold text-white pb-3 lg:pt-8;
@@ -27,8 +27,15 @@
     width: 254px;
   }
 
+  .backgroundContainerMobile {
+    @apply absolute top-0 left-0 w-screen -z-10 ;
+    height: 100%;
+    min-height: 600px;
+    max-height: 1000px;
+  }
+
   .backgroundContainer {
-    @apply absolute w-full h-screen top-0 left-0 -z-10;
+    @apply absolute hidden lg:block w-full h-screen top-0 left-0 -z-10;
     min-height: 1084px;
   }
 
@@ -51,7 +58,7 @@
 }
 
 .cardsConteiner {
-  @apply flex justify-evenly flex-wrap gap-10 px-8 md:px-0;
+  @apply flex justify-evenly flex-wrap gap-10 px-6 md:px-0;
   margin-top: 65px;
 }
 

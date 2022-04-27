@@ -1,3 +1,1 @@
-const Component = require('./Home');
-
-module.exports = Component;
+module.exports = require('./Home');

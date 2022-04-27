@@ -3,9 +3,12 @@ import Icon from "../Icon";
 
 const Footer = ({ email, phone, direction, sentence }) => (
   <div className={styles.conteiner}>
-    <div className={styles.logoFooter}>
-      <Icon id="LogoFooter" />
-      <p className={styles.sentence}>{sentence}</p>
+    <div className={styles.logosContainer}>
+      <Icon id="LogoFooter" className={styles.logoFooter} />
+      <div className={styles.logoAndCaption}>
+        <Icon id='LogoNav' />
+        <p className={styles.sentence}>{sentence}</p>
+      </div>
     </div>
     <div className={styles.conteinerContact}>
       <div className={styles.contact}>
@@ -15,8 +18,8 @@ const Footer = ({ email, phone, direction, sentence }) => (
       </div>
       <div className={styles.conteinerSocialMedia}>
         <div className={styles.boxSocialMedia}>
-        <Icon id="Linkedin" href="https://www.linkedin.com/" />
-        <Icon id="Facebook" href="https://www.facebook.com/" />
+          <Icon id="Linkedin" href="https://www.linkedin.com/" />
+          <Icon id="Facebook" href="https://www.facebook.com/" />
         </div>
       </div>
     </div>
