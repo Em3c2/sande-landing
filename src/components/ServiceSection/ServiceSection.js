@@ -6,6 +6,7 @@ const ServiceSection = () => {
     <ul>
       <ServiceCard
         photo="/images/section1.jpg"
+        id="section1"
         bgColor="#C9C4C1"
         color="#3C3A3A"
         title="Aspectos Patrimoniales del Derecho de las Familias"
@@ -15,6 +16,7 @@ const ServiceSection = () => {
       />
       <ServiceCard
         photo="/images/section2.jpg"
+        id="section2"
         bgColor="#211A14"
         title="Litigios Civiles y Asesoramiento Legal"
         caption="Lorem ipsum dolor sit amet, eu eius electram pro, in autem libris sed.
@@ -22,6 +24,7 @@ const ServiceSection = () => {
        Sea liber ignota et, eu eam lorem libris quaestio. Postea malorum sapientem ex sea, nam nonumy quaestio periculis ne."
       />
       <ServiceCard
+        id="section3"
         photo="/images/section3.jpg"
         bgColor="#BA8E61"
         title="Consultoría en Tecnologías Legales"
@@ -31,6 +34,7 @@ const ServiceSection = () => {
       />
       <ServiceCard
         photo="/images/section4.jpg"
+        id="section4"
         bgColor="#D4BAA1"
         color="#3C3A3A"
         title="Desarrollo de Sistemas y Procesos Legales"

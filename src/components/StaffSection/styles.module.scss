@@ -2,11 +2,11 @@
   @apply flex flex-col items-center w-full;
 
   .title {
-    @apply text-5xl mt-20 font-bold;
+    @apply text-2xl lg:text-5xl mt-20 font-bold;
   }
   
   .staffCards {
-    @apply grid p-4 justify-center py-10 my-10 bg-gray-100 rounded-3xl gap-6 lg:gap-10 w-full;
+    @apply grid p-6 justify-center py-10 my-10 bg-gray-100 rounded-3xl gap-6 lg:gap-10 w-full;
     grid-template-columns: repeat(auto-fill, minMax(300px, 450px));
   }
 

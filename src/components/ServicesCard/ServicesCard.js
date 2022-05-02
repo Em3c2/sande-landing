@@ -2,9 +2,13 @@ import styles from './styles.module.scss'
 
 import Image from '../Image'
 
-const ServiceCard = ({ title, caption, bgColor, color = '#fefefe', photo = '/images/section1.png' }) => {
+const ServiceCard = ({ id, title, caption, bgColor, color = '#fefefe', photo = '/images/section1.png' }) => {
     return (
-        <div className={styles.containerServices} style={{ backgroundColor: bgColor, color }}>
+        <div 
+        className={styles.containerServices} 
+        style={{ backgroundColor: bgColor, color }}
+        id={id}
+        >
             <div className={styles.boxImage}>
                 <Image src={photo} layout="fill" objectFit="cover" />
             </div>
