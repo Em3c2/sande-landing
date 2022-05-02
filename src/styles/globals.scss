@@ -16,6 +16,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 iframe {
   @apply m-0 lg:m-auto;
   max-width: calc(100vw - 5rem);
@@ -34,8 +38,6 @@ main {
 .ReactModalPortal {
   @apply relative z-50;
 }
-
-
 
 /*Tailwind config*/
 @layer components {

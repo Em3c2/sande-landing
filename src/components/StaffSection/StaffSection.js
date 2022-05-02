@@ -1,3 +1,4 @@
+import Link from "next/link"
 import dynamic from 'next/dynamic'
 import styles from "./styles.module.scss"
 
@@ -5,8 +6,8 @@ const StaffCard = dynamic(() => import('../StaffCard/'))
 
 const StaffSection = ({ full }) => (
   <section className={styles.staffSection}>
-    <h2 className={`${styles.title}`}>El Equipo</h2>
-    <div className={styles.staffCards}>
+    <h2 className={styles.title}>El Equipo</h2>
+    <div className={`${styles.staffCards} ${full ? styles.full : ''}`}>
       <StaffCard
         photo="/images/staff/eduardo.jpg"
         name="Eduardo"
@@ -56,8 +57,12 @@ const StaffSection = ({ full }) => (
         )
       }
     </div>
-    <button className='btn__blue-filled'>Conocenos</button>
+    <Link href={full ? '/contacto' : '/estudio'}>
+      <a className='btn__blue-filled'>
+        {full ? 'Contactanos' : 'Conocenos'}
+      </a>
+    </Link>
   </section>
 )
 
-export default StaffSection
+export default StaffSection;

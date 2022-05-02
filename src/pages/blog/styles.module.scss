@@ -1,5 +1,5 @@
 .background {
-  @apply bg-gray-100 lg:rounded-3xl w-full lg:w-auto lg:m-8;
+  @apply bg-gray-100 lg:rounded-3xl w-full lg:w-auto lg:m-6;
 }
 
 .title {
@@ -7,7 +7,7 @@
 }
 
 .cardGrid {
-  @apply grid m-auto w-full p-8 lg:p-12 gap-4 lg:gap-10 content-center items-center justify-center;
+  @apply grid m-auto w-full p-6 lg:py-12 gap-4 lg:gap-12 content-center items-center justify-center;
   grid-template-columns: repeat(auto-fill, minMax(300px, 550px));
   grid-template-rows: repeat(auto-fill, 500px);
 }

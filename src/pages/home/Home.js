@@ -27,118 +27,126 @@ const Home = ({ posts = [] }) => {
       </Head>
       <Navbar color="white" />
       <main id="page-wrap">
-      <section>
-        <div className={styles.cover}>
-          <div className={styles.backgroundContainerMobile}>
-            <Image
-              loading="eager"
-              className={styles.background}
-              src="/images/cover-mobile.png"
-              blurDataURL="/images/cover-mobile.png"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <div className={styles.backgroundContainer}>
-            <Image
-              loading="eager"
-              className={styles.background}
-              src="/images/cover-home.jpg"
-              blurDataURL="/images/cover-home-small.jpg"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <div className={styles.mainConteiner}>
-            <div className={styles.caption}>
-              <h1 className={styles.title}>
-                La confianza al servicio de sus necesidades
-              </h1>
-              <p className={styles.mainParagraph}>
-                Fundado hace más de 45 años, nuestro objetivo siempre ha sido
-                hacer propios los intereses de nuestros clientes, buscando
-                asesorar, cuidar y proteger a estos en un marco de estricta
-                confidencialidad.
-              </p>
-              <p className={styles.mainParagraph}>
-                Ya sea en litigios, asesoramiento o consultoría, la tenacidad,
-                creatividad y la experiencia son claros actores en nuestro
-                trabajo, siendo que buscamos promover el mejoramiento de
-                nuestros servicios con la permanente incorporación de nuevas
-                tecnologías.
-              </p>
-              <Link href="/estudio">
-                <button className={styles.mainButton}>Sobre nosotros</button>
-              </Link>
+        <section>
+          <div className={styles.cover}>
+            <div className={styles.backgroundContainerMobile}>
+              <Image
+                loading="eager"
+                className={styles.background}
+                src="/images/cover-mobile.png"
+                blurDataURL="/images/cover-mobile.png"
+                layout="fill"
+                objectFit="cover"
+              />
             </div>
-            <div className={styles.captionLogo}>
-              <div className={styles.logoContainer}>
-                <Icon id='LogoCover' />
+            <div className={styles.backgroundContainer}>
+              <Image
+                loading="eager"
+                className={styles.background}
+                src="/images/cover-home.jpg"
+                blurDataURL="/images/cover-home-small.jpg"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+            <div className={styles.mainConteiner}>
+              <div className={styles.caption}>
+                <h1 className={styles.title}>
+                  La confianza al servicio de sus necesidades
+                </h1>
+                <p className={styles.mainParagraph}>
+                  Fundado hace más de 45 años, nuestro objetivo siempre ha sido
+                  hacer propios los intereses de nuestros clientes, buscando
+                  asesorar, cuidar y proteger a estos en un marco de estricta
+                  confidencialidad.
+                </p>
+                <p className={styles.mainParagraph}>
+                  Ya sea en litigios, asesoramiento o consultoría, la tenacidad,
+                  creatividad y la experiencia son claros actores en nuestro
+                  trabajo, siendo que buscamos promover el mejoramiento de
+                  nuestros servicios con la permanente incorporación de nuevas
+                  tecnologías.
+                </p>
+                <Link href="/estudio" prefetch>
+                  <button className={styles.mainButton}>Sobre nosotros</button>
+                </Link>
+              </div>
+              <div className={styles.captionLogo}>
+                <div className={styles.logoContainer}>
+                  <Icon id='LogoCover' />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className={styles.cardsConteiner}>
-        <SimpleCard
-          image="/images/cardHome1.jpg"
-          caption="Aspectos Patrimoniales del Derecho de las Familias"
-        />
-        <SimpleCard
-          image="/images/cardHome2.png"
-          caption="Litigios Civiles y Asesoramiento Legal"
-        />
-        <SimpleCard
-          image="/images/cardHome3.jpg"
-          caption="Consultoría en Tecnologías Legales"
-        />
-        <SimpleCard
-          image="/images/cardHome4.jpg"
-          caption="Desarrollo de Sistemas y Procesos Legales"
-        />
-      </section>
-      <section>
-        <ProcessSection
-          title="Sobre nosotros."
-          caption="Nuestro proceso"
-        />
-      </section>
-      <section
-        className="block md:hidden mt-10"
-      >
-        <Image
-          layout="responsive"
-          width="375"
-          height="250"
-          src="/images/section-quote-home-mobile.png"
-        />
-      </section>
-      <section
-        className="hidden md:block mt-16"
-      >
-        <Image
-          layout="responsive"
-          width="1920"
-          height="804"
-          src="/images/section-quote-home-desktop.png"
-        />
-      </section>
+        </section>
+        <section className={styles.cardsConteiner}>
+          <SimpleCard
+            image="/images/cardHome1.jpg"
+            section="section1"
+            caption="Aspectos Patrimoniales del Derecho de las Familias"
+          />
+          <SimpleCard
+            image="/images/cardHome2.png"
+            section="section2"
+            caption="Litigios Civiles y Asesoramiento Legal"
+          />
+          <SimpleCard
+            image="/images/cardHome3.jpg"
+            section="section3"
+            caption="Consultoría en Tecnologías Legales"
+          />
+          <SimpleCard
+            image="/images/cardHome4.jpg"
+            section="section4"
+            caption="Desarrollo de Sistemas y Procesos Legales"
+          />
+        </section>
+        <section>
+          <ProcessSection
+            title="Sobre nosotros."
+            caption="Nuestro proceso"
+          />
+        </section>
+        <section
+          className="block md:hidden mt-10"
+        >
+          <Image
+            layout="responsive"
+            width="375"
+            height="250"
+            src="/images/section-quote-home-mobile.png"
+          />
+        </section>
+        <section
+          className="hidden md:block mt-16"
+        >
+          <Image
+            layout="responsive"
+            width="1920"
+            height="804"
+            src="/images/section-quote-home-desktop.png"
+          />
+        </section>
 
-      <StaffSection />
+        <StaffSection />
 
-      <section className={styles.postsSection}>
-        <h2>Nuestro blog</h2>
-        <div className={styles.postsContainer}>
-          {posts.map(post => (
-            <PostCard post={post} key={post.id} className="block md:last-of-type:hidden lg:last-of-type:block" />
-          ))}
-        </div>
-        <button className='btn__blue m-auto'>Ir al blog</button>
-      </section>
-      <section>
-        <Form />
-      </section>
-    </main>
+        <section className={styles.postsSection}>
+          <h2>Nuestro blog</h2>
+          <div className={styles.postsContainer}>
+            {posts.map(post => (
+              <PostCard post={post} key={post.id} className="block md:last-of-type:hidden lg:last-of-type:block" />
+            ))}
+          </div>
+          <Link href="/blog">
+            <a className='btn__blue m-auto'>
+              Ir al blog
+            </a>
+          </Link>
+        </section>
+        <section>
+          <Form />
+        </section>
+      </main>
     </div>
   );
 };
