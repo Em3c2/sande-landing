@@ -1,0 +1,23 @@
+.containerServices {
+    @apply  flex items-center bg-slate-900 flex-col lg:flex-row; 
+     
+     .boxImage {
+         @apply overflow-hidden relative font-semibold text-lg md:text-xl lg:text-lg xl:text-xl  w-full; 
+         max-width: 900px;
+         height: 500px;
+     }
+    
+     .boxServices {
+        @apply text-white lg:ml-28 lg:max-w-screen-sm sm:py-10 lg:py-0 ;
+        // max-width: 600px
+       
+    } 
+    .title {
+        @apply text-white text-4xl font-bold pb-10 sm:pt-9 lg:pt-0;
+    }
+
+    .caption {
+        @apply text-xl sm:pb-9;
+    }
+ }
+ 
