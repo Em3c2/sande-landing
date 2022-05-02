@@ -2,7 +2,7 @@
   @apply p-8 lg:p-12 flex relative lg:static flex-col items-start justify-center m-auto gap-5 overflow-hidden;
 
   .title {
-    @apply text-2xl w-full lg:text-5xl lg:max-w-xl z-10 font-bold text-white pb-3 lg:pt-8;
+    @apply text-2xl w-full lg:text-5xl lg:max-w-xl z-10 font-bold text-white pb-3 pt-8 lg:pt-8;
 
     @media (min-width: 1024px) {
       line-height: 61px;
@@ -14,7 +14,7 @@
   }
 
   .mainParagraph {
-    @apply text-white lg:text-lg xl:text-xl pt-10;
+    @apply text-white lg:text-lg xl:text-xl pt-5 lg:pt-10;
     line-height: 34px;
     max-width: 534px;
     font-weight: 400;
@@ -28,7 +28,7 @@
   }
 
   .backgroundContainerMobile {
-    @apply absolute top-0 left-0 w-screen -z-10 ;
+    @apply absolute top-0 left-0 w-screen -z-10 lg:hidden;
     height: 100%;
     min-height: 600px;
     max-height: 1000px;
@@ -63,18 +63,17 @@
 }
 
 .postsSection {
-  @apply lg:bg-gray-100 rounded-3xl justify-center flex flex-wrap items-center gap-4 lg:p-4 py-7 lg:mx-7 mb-6;
+  @apply lg:bg-gray-100 rounded-3xl justify-center flex flex-wrap items-center gap-4 lg:p-4 py-7 lg:mx-7 mb-6 lg:pb-12;
   
   @media (min-width: 1024px) {
     background: linear-gradient(93.21deg, #f6f6fb 2.88%, #f9f9f9 93.14%);
-    padding-bottom: 3rem;
   }
 
   h2 {
-    @apply flex justify-center text-2xl lg:text-5xl font-bold lg:mt-10;
+    @apply flex justify-center text-2xl md:text-3xl lg:text-5xl font-bold lg:mt-10;
   }
 }
 
 .postsContainer {
-  @apply relative w-full flex flex-col items-center p-6 lg:p-12 gap-8 m-auto md:flex-row lg:justify-between;
+  @apply relative w-full flex flex-col items-center p-6 lg:p-12 gap-8 m-auto md:flex-row lg:justify-evenly;
 }

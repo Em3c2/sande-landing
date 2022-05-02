@@ -8,61 +8,49 @@ const StaffSection = ({ full }) => (
     <h2 className={`${styles.title}`}>El Equipo</h2>
     <div className={styles.staffCards}>
       <StaffCard
-        photo="/images/photo-staff-1.jpg"
-        color="#6683bb"
-        name="Tomas Sande"
+        photo="/images/staff/eduardo.jpg"
+        name="Eduardo"
         role="Founder"
         email="tomassande@estudio.com"
         phone="1111111111"
-
       />
       <StaffCard
-        photo="/images/photo-staff-1.jpg"
-        color="#6683bb"
-        name="Tomas Sande"
+        photo="/images/staff/tomas.jpg"
+        name="Tomas"
         role="Founder"
         email="tomassande@estudio.com"
         phone="1111111111"
-
       />
       <StaffCard
-        photo="/images/photo-staff-1.jpg"
-        color="#6683bb"
-        name="Tomas Sande"
+        photo="/images/staff/andrea.jpg"
+        name="Andrea"
         role="Founder"
         email="tomassande@estudio.com"
         phone="1111111111"
-        className="block md:hidden lg:block"
       />
       {
         full && (
           <>
             <StaffCard
-              photo="/images/photo-staff-1.jpg"
-              color="#6683bb"
-              name="Tomas Sande"
+              photo="/images/staff/mariarosa.jpg"
+              name="Maria Rosa"
               role="Founder"
               email="tomassande@estudio.com"
               phone="1111111111"
-              className="block md:hidden lg:block"
             />
             <StaffCard
-              photo="/images/photo-staff-1.jpg"
-              color="#6683bb"
-              name="Tomas Sande"
+              photo="/images/staff/rosario.jpg"
+              name="Rosario"
               role="Founder"
               email="tomassande@estudio.com"
               phone="1111111111"
-              className="block md:hidden lg:block"
             />
             <StaffCard
-              photo="/images/photo-staff-1.jpg"
-              color="#6683bb"
-              name="Tomas Sande"
+              photo="/images/staff/maia.jpg"
+              name="Maia"
               role="Founder"
               email="tomassande@estudio.com"
               phone="1111111111"
-              className="block md:hidden lg:block"
             />
           </>
         )

@@ -6,6 +6,8 @@
   @apply font-bold text-center text-5xl pt-16 pb-2 px-4;
 }
 
-.grid {
-  @apply relative w-full flex flex-wrap justify-between p-8 lg:p-12 gap-8;
+.cardGrid {
+  @apply grid m-auto w-full p-8 lg:p-12 gap-4 lg:gap-10 content-center items-center justify-center;
+  grid-template-columns: repeat(auto-fill, minMax(300px, 550px));
+  grid-template-rows: repeat(auto-fill, 500px);
 }

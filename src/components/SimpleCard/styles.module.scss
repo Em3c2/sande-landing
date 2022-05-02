@@ -1,11 +1,12 @@
 .card {
   @apply rounded-3xl overflow-hidden relative font-semibold text-lg md:text-xl lg:text-lg xl:text-xl bg-white w-full; 
-  min-height: 19rem;
+  min-height: 15rem;
   box-shadow: 0px 6.15603px 30.7801px rgba(132, 145, 170, 0.19);
   max-width: 376px;
 
   @media (min-width: 768px) {
     width: calc(50% - 2.5rem);
+    min-height: 19rem;
   }
 
   @media (min-width: 1024px) {
@@ -19,5 +20,5 @@
 }
 
 .content {
-  @apply p-3 md:p-5 lg:p-2 xl:p-5;
+  @apply px-5 py-3 md:p-5 lg:p-2 xl:p-5;
 }

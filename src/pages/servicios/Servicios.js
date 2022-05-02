@@ -14,7 +14,7 @@ const Servicios = () => {
       <main id="page-wrap">
         <section>
           <SimpleHeader
-            image='/images/services-cover.jpg'
+            image='/images/cover-services.jpg'
             title="Nuestros servicios"
             className="mb-24"
           />

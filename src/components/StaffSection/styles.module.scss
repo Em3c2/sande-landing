@@ -1,17 +1,16 @@
 .staffSection {
-  @apply flex flex-col items-center;
+  @apply flex flex-col items-center w-full;
 
   .title {
     @apply text-5xl mt-20 font-bold;
   }
   
   .staffCards {
-    @apply flex m-6 p-4 py-7 lg:m-16 bg-gray-100 rounded-3xl justify-between flex-wrap items-center gap-4;
-    background: linear-gradient(93.21deg, #F6F6FB 2.88%, #F9F9F9 93.14%);
-    box-shadow: 0 120px 40px -100px rgba(104, 104, 104, 0.1);
+    @apply grid p-4 justify-center py-10 my-10 bg-gray-100 rounded-3xl gap-6 lg:gap-10 w-full;
+    grid-template-columns: repeat(auto-fill, minMax(300px, 450px));
   }
 
-  button {
+  :global(.btn__blue-filled) {
     @apply m-auto mt-3 lg:-mt-4 mb-10;
   }
 }
