@@ -53,9 +53,25 @@ const StaffCard = ({ className, color, name, role, email, phone, photo = '/image
               className={styles.closeBtn}
               onClick={() => toggleModalIsOpen(false)}
             >
-              <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="1" y1="28.5858" x2="28.5858" y2="1" stroke="white" stroke-width="2" stroke-linecap="round" />
-                <line x1="2.41421" y1="1" x2="30" y2="28.5858" stroke="white" stroke-width="2" stroke-linecap="round" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="31"
+                height="30"
+                fill="none"
+                viewBox="0 0 31 30"
+              >
+                <path
+                  stroke="#fff"
+                  strokeLinecap="round"
+                  strokeWidth="2"
+                  d="M1 28.586L28.586 1"
+                ></path>
+                <path
+                  stroke="#fff"
+                  strokeLinecap="round"
+                  strokeWidth="2"
+                  d="M2.414 1L30 28.586"
+                ></path>
               </svg>
             </button>
             <p className={styles.name}>{name}</p>

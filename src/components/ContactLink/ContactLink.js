@@ -10,7 +10,7 @@ const ContactLink = ({ icon, text, type, link }) => {
   if (type === 'external') customLink = link;
 
   return (
-    <a className={styles.link} href={customLink} target="_blank" referrerPolicy="no-referrer" >
+    <a className={styles.link} href={customLink} target="_blank" rel="noreferrer" >
       <div className={styles.linkContainer}>
         <Icon id={icon} />
         <span>{text}</span>
