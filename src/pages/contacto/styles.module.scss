@@ -1,0 +1,19 @@
+.infoContainer {
+  @apply relative h-screen flex px-8 my-12 gap-6 lg:gap-16 flex-col lg:flex-row lg:m-12;
+
+  @media (min-width: 1024px) {
+    height: 26rem;
+  }
+
+  .info {
+    @apply lg:w-1/2 flex flex-col justify-between lg:h-full h-80;
+  }
+
+  .map {
+    @apply h-full w-full relative rounded-2xl overflow-hidden shadow-xl;
+    
+    @media (min-width: 1024px) {
+      width: 70vw;
+    }
+  }
+}

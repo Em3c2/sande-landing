@@ -1,0 +1,12 @@
+.linkContainer {
+  @apply flex gap-6 items-center w-full rounded-lg lg:rounded-2xl p-6 h-16 lg:h-28;
+  box-shadow: 0px 6px 30px rgba(198, 198, 198, 0.25);
+
+  span {
+    @apply font-bold lg:text-xl;
+  }
+
+  svg {
+    @apply w-7 h-7 lg:w-12 lg:h-12;
+  }
+}

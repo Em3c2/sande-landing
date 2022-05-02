@@ -7,6 +7,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/*Global Sets*/
 * {
   font-family: "Open Sans", $default-font;
   box-sizing: border-box;
@@ -27,6 +29,15 @@ main {
   }
 }
 
+
+/*React Modal config*/
+.ReactModalPortal {
+  @apply relative z-50;
+}
+
+
+
+/*Tailwind config*/
 @layer components {
   .btn {
     &__white {

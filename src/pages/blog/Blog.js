@@ -24,7 +24,7 @@ const Blog = ({ posts = [] }) => {
           loud={false}
         />
       <div className={styles.background}>
-        <div className={styles.grid}>
+        <div className={styles.cardGrid}>
           {
             posts && posts.map(post => (
               <PostCart post={post} key={post.id} />
