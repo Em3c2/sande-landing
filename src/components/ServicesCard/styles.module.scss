@@ -1,0 +1,27 @@
+.containerServices {
+    @apply flex items-center flex-col lg:flex-row min-h-screen lg:min-h-fit; 
+     
+     .boxImage {
+         @apply overflow-hidden relative font-semibold text-lg md:text-xl lg:text-lg xl:text-xl w-full;
+         height: 50vh; 
+
+        @media (min-width: 1024px) {
+            height: 500px;
+            max-width: 900px;
+        }
+     }
+    
+     .boxServices {
+        @apply lg:ml-28 lg:max-w-screen-sm sm:py-10 lg:py-0 ;
+        // max-width: 600px
+       
+    } 
+    .title {
+        @apply text-4xl font-bold pb-10 sm:pt-9 lg:pt-0;
+    }
+
+    .caption {
+        @apply text-xl sm:pb-9;
+    }
+ }
+ 
