@@ -19,7 +19,11 @@ const Servicios = () => {
             className="mb-24"
           />
           <div className='flex my-10'>
-            <button className='btn__blue-filled mx-auto'>Contactanos</button>
+            <Link href="/blog">
+              <a className='btn__blue-filled mx-auto'>
+                Contactanos
+              </a>
+            </Link>
           </div>
         </section>
         <section>
