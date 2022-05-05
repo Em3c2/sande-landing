@@ -15,7 +15,7 @@ const Estudio = () => {
       <Navbar color="black" />
       <section>
         <SimpleHeader 
-          className="mb-10"
+          className="mb-4 lg:mb-10 relative mt-16 lg:mt-0 xl:top-0"
           title="El Estudio"
           image="/images/cover-estudio.jpg"
         />

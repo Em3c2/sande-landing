@@ -9,16 +9,18 @@ import styles from './styles.module.scss';
 
 const Contacto = () => {
   return (
-    <main className="relative">
+    <main className="relative flex flex-col h-full justify-between">
       <Head>
         <title>Contacto | Estudio Sande</title>
       </Head>
-      <Navbar color="black" />
-      <SimpleHeader
-        title="Contactanos"
-        className="mb-24 relative top-0"
-        loud={false}
-      />
+      <div>
+        <Navbar color="black" />
+        <SimpleHeader
+          title="Contactanos"
+          className="mb-4 lg:mb-24 relative mt-16 lg:mt-0 xl:top-0"
+          loud={false}
+        />
+      </div>
       <div className={styles.infoContainer}>
         <div className={styles.info}>
           <ContactLink
@@ -42,7 +44,7 @@ const Contacto = () => {
           <Image src="/images/map.png" layout="fill" objectFit="cover" />
         </div>
       </div>
-      <Form className="xl:absolute bottom-0 w-full" />
+      <Form className="w-full" />
     </main>
   );
 };

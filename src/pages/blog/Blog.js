@@ -19,7 +19,7 @@ const Blog = ({ posts = [] }) => {
       </Head>
       <Navbar color="black" />
       <SimpleHeader 
-          className="mb-24"
+          className="mb-4 lg:mb-24 relative mt-16 lg:mt-0 xl:top-0"
           title="Bienvenidos a nuestro blog"
           loud={false}
         />

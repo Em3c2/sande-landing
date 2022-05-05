@@ -16,7 +16,7 @@ const Servicios = () => {
         <SimpleHeader
           image='/images/cover-services.jpg'
           title="Nuestros servicios"
-          className="mb-24"
+          className="mb-4 lg:mb-24 relative mt-16 lg:mt-0 xl:top-0"
         />
         <div className='flex my-10'>
           <Link href="/blog">
