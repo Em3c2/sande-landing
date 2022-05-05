@@ -25,6 +25,7 @@ const StaffCard = ({ className, color, name, role, email, phone, photo = '/image
             src={photo}
             layout="fill"
             objectFit="cover"
+            objectPosition="top"
           />
           <div className={styles.caption}>
             <p className={styles.name}>{name}</p>

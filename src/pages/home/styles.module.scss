@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .cover {
   @apply p-8 lg:p-12 flex relative lg:static flex-col items-start justify-center m-auto gap-5 overflow-hidden;
 
@@ -35,8 +37,9 @@
   }
 
   .backgroundContainer {
-    @apply absolute hidden lg:block w-full h-screen top-0 left-0 -z-10;
-    min-height: 1084px;
+    @apply absolute hidden lg:block w-full h-screen top-0 left-0 -z-10 m-auto 2xl:-translate-x-1/2 2xl:left-1/2;
+    height: 1084px;
+    max-width: $max-width;
   }
 
   .caption {

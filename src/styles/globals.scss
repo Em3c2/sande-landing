@@ -20,17 +20,29 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  @apply bg-gradient-to-b from-white to-slate-50;
+}
+
 iframe {
   @apply m-0 lg:m-auto;
   max-width: calc(100vw - 5rem);
 }
 
 main {
-  margin-top: 56px;
+  margin-top: 3.5rem;
+  max-width: $max-width;
+  min-height: calc(100vh - 18rem);
+  margin: auto;
     
   @media (min-width: 1024px) {
     @apply mt-0;
   }
+}
+
+footer {
+  max-width: $max-width;
+  margin: auto;
 }
 
 

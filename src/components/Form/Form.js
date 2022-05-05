@@ -15,7 +15,7 @@ const inputNames = {
   message: "Mensaje"
 }
 
-const Form = () => {
+const Form = ({ className }) => {
   const [formData, setFormData] = useState(emptyForm);
   const [error, setError] = useState('');
   const [submiting, setSubmiting] = useState(false);
@@ -33,7 +33,6 @@ const Form = () => {
   };
 
   const postForm = data => {
-
     fetch('/api/form', {
       method: "POST",
       headers: {
@@ -74,7 +73,7 @@ const Form = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <div className={styles.image__desktop}>
         <Image src="/images/rombo.png" width="780" height="785" />
       </div>

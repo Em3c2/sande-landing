@@ -13,6 +13,7 @@ const Image = props => (
     placeholder={props.nolazy || 'blur'}
     nolazy={undefined}
     alt={props.alt || ''}
+    quality={100}
   />
 )
 

@@ -1,15 +1,16 @@
 .card {
-  @apply rounded-3xl overflow-hidden relative w-full bg-white m-auto;
-  box-shadow: 0px 6px 30px rgba(132, 145, 170, 0.2);
+  @apply rounded-3xl overflow-hidden relative w-full bg-white m-auto lg:m-0;
+  box-shadow: 0 0.375rem 1.875rem rgba(132, 145, 170, 0.2);
   width: 100%;
+  max-width: 45.625rem;
 
   @media (min-width: 1024px) {
-    min-height: 500px;
+    min-height: 31.25rem;
   }
 
   &:hover {
     transition: 200ms ease-in-out;
-    box-shadow: 0px 6px 40px rgba(132, 145, 170, 0.8);
+    box-shadow: 0 0.375rem 2.5rem rgba(132, 145, 170, 0.8);
   }
 }
 

@@ -7,31 +7,29 @@ import styles from './styles.module.scss';
 
 const Servicios = () => {
   return (
-    <div className='overflow-hidden' id="outer-container">
+    <main>
       <Head>
         <title>Servicios | Estudio Sande</title>
       </Head>
       <Navbar color="black" />
-      <main id="page-wrap">
-        <section>
-          <SimpleHeader
-            image='/images/cover-services.jpg'
-            title="Nuestros servicios"
-            className="mb-24"
-          />
-          <div className='flex my-10'>
-            <Link href="/blog">
-              <a className='btn__blue-filled mx-auto'>
-                Contactanos
-              </a>
-            </Link>
-          </div>
-        </section>
-        <section>
-          <ServiceSection />
-        </section>
-      </main>
-    </div>
+      <section>
+        <SimpleHeader
+          image='/images/cover-services.jpg'
+          title="Nuestros servicios"
+          className="mb-24"
+        />
+        <div className='flex my-10'>
+          <Link href="/blog">
+            <a className='btn__blue-filled mx-auto'>
+              Contactanos
+            </a>
+          </Link>
+        </div>
+      </section>
+      <section>
+        <ServiceSection />
+      </section>
+    </main>
   );
 };
 

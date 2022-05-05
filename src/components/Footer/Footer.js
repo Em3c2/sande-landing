@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import Icon from "../Icon";
 
 const Footer = ({ email, phone, direction, sentence }) => (
-  <div className={styles.conteiner}>
+  <footer className={styles.conteiner}>
     <div className={styles.logosContainer}>
       <Icon id="LogoFooter" className={styles.logoFooter} />
       <div className={styles.logoAndCaption}>
@@ -23,7 +23,7 @@ const Footer = ({ email, phone, direction, sentence }) => (
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

@@ -1,6 +1,6 @@
 
 .card {
-  @apply rounded-3xl overflow-hidden relative font-semibold text-lg md:text-xl lg:text-lg xl:text-xl bg-white w-full; 
+  @apply rounded-3xl overflow-hidden relative font-semibold text-lg md:text-xl lg:text-lg xl:text-xl bg-white w-full 2xl:text-2xl; 
   min-height: 15rem;
   box-shadow: 0px 6px 30px rgba(132, 145, 170, 0.2);
   max-width: 376px;
@@ -12,6 +12,10 @@
 
   @media (min-width: 1024px) {
     width: calc(25% - 2.5rem);
+  }
+
+  @media (min-width: 1536px) {
+    max-width: 30rem;
   }
 
   .image {
