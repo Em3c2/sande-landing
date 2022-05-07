@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('body');
 
-const StaffCard = ({ className, color, name, role, email, phone, photo = '/images/photo-staff-1.jpg' }) => {
+const StaffCard = ({ className, color, name, role, email, phone, photo = '/images/photo-staff-1.jpg', bio }) => {
   const [modalIsOpen, toggleModalIsOpen] = useState(false);
 
   const openModal = event => {
@@ -30,8 +30,6 @@ const StaffCard = ({ className, color, name, role, email, phone, photo = '/image
           <div className={styles.caption}>
             <p className={styles.name}>{name}</p>
             <p className={styles.role}>{role}</p>
-            <p>{email}</p>
-            <p>{phone}</p>
           </div>
         </button>
       )
@@ -79,7 +77,7 @@ const StaffCard = ({ className, color, name, role, email, phone, photo = '/image
             <p className={styles.role}>{role}</p>
             <p>{email}</p>
             <p>{phone}</p>
-            <p className={styles.paragraph}>Lorem ipsum dolor sit amet, eu eius electram pro, in autem libris sed. Quem accusata mea eu, sadipscing delicatissimi necessitatibus eos ut. Novum ubique quaestio vim ad. Sea liber ignota et, eu eam lorem libris quaestio. Postea malorum sapientem ex sea, nam nonumy quaestio periculis ne. Novum ubique quaestio vim ad. Sea liber ignota et, eu eam lorem libris quaestio. Postea malorum sapientem ex sea, nam nonumy quaestio periculis ne.</p>
+            <p className={styles.paragraph}>{bio}</p>
           </div>
         </Modal >
       )

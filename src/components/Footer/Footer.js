@@ -18,8 +18,15 @@ const Footer = ({ email, phone, direction, sentence }) => (
       </div>
       <div className={styles.conteinerSocialMedia}>
         <div className={styles.boxSocialMedia}>
-          <Icon id="Linkedin" href="https://www.linkedin.com/" />
-          <Icon id="Facebook" href="https://www.facebook.com/" />
+          <a href="https://www.linkedin.com/company/estudio-sande/"  target="_blank" rel="noreferrer" >
+            <Icon id="Linkedin" />
+          </a>
+          <a href="https://twitter.com/EstudioSande?s=20&t=pOwuf1VZMXaTwqrtM_RGSQ"  target="_blank" rel="noreferrer">
+            <Icon id="Twitter" />
+          </a>
+          <a href="https://www.instagram.com/estudio.sande/"  target="_blank" rel="noreferrer">
+            <Icon id="Instagram" />
+          </a>
         </div>
       </div>
     </div>

@@ -35,7 +35,7 @@ const Contacto = () => {
             type="external"
           />
           <ContactLink
-            text="+54 9 1111111111"
+            text="+54 11 2472-3830"
             icon="Whatsapp"
             type="whatsapp"
           />

@@ -3,11 +3,12 @@ import LogoNav from './icons/LogoNav';
 import LogoFooter from './icons/LogoFooter';
 import Facebook from './icons/Facebook';
 import Linkedin from './icons/Linkedin';
+import Instagram from './icons/Instagram';
+import Twitter from './icons/Twitter';
 import CloseButton from './icons/CloseButton';
 import Whatsapp from './icons/Whatsapp';
 import MailLogo from './icons/MailLogo';
 import MapsLogo from './icons/MapsLogo';
-
 
 const ICONS = {
   LogoCover,
@@ -19,6 +20,8 @@ const ICONS = {
   Whatsapp,
   MailLogo,
   MapsLogo,
+  Instagram,
+  Twitter,
 };
 
 const Icon = props => {

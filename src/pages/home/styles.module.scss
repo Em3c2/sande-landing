@@ -43,6 +43,7 @@
   }
 
   .caption {
+    @apply mt-10 lg:mt-0;
     width: calc(100vw - 5rem);
 
     @media (min-width: 1024px) {
@@ -67,7 +68,7 @@
 
 .postsSection {
   @apply lg:bg-gray-100 rounded-3xl justify-center flex flex-wrap items-center gap-4 lg:p-4 py-7 lg:mx-20 mb-6 lg:pb-12;
-  
+
   @media (min-width: 1024px) {
     background: linear-gradient(93.21deg, #f6f6fb 2.88%, #f9f9f9 93.14%);
   }
