@@ -38,7 +38,6 @@ const Post = ({ data, content }) => {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={img} />
-
       </Head>
       <div className='py-12 px-8 text-justify flex flex-col items-center justify-center m-auto gap-5'>
         <div className="max-w-5xl w-full rounded-md overflow-hidden">
