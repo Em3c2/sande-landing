@@ -31,18 +31,18 @@ const Post = ({ data, content }) => {
         <meta property="og:url" content="https://estudiosande.com" />
         <meta property="og:title" content={`${title} | Estudio Sande`} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" itemProp="image" content={img} />
-        <meta property="og:image:secure_url" itemProp="image" content={img} />
-        
+        <meta property="og:image" itemProp="image" content={img.includes('post_images') ? `https://www.estudiosande.com/${img}` : img} />
+        <meta property="og:image:secure_url" itemProp="image" content={img.includes('post_images') ? `https://www.estudiosande.com/${img}` : img} />
+
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://estudiosande.com" />
         <meta property="twitter:title" content={`${title} | Estudio Sande`} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={img} />
+        <meta property="twitter:image" content={img.includes('post_images') ? `https://www.estudiosande.com/${img}` : img} />
       </Head>
       <div className='py-12 px-8 text-justify flex flex-col items-center justify-center m-auto gap-5'>
         <div className="max-w-5xl w-full rounded-md overflow-hidden">
-          <Image src={img} layout="responsive" width="800" height="350" objectFit="cover"/>
+          <Image src={img} layout="responsive" width="800" height="350" objectFit="cover" />
         </div>
         <Markdown className='prose max-w-5xl w-full' content={content} />
       </div>
