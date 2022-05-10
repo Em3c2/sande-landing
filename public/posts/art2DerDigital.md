@@ -1,7 +1,7 @@
 ---
 date: "12-8-20"
 title: "Derecho Digital: Innovación Legal e Inteligencia Artificial"
-description: "“Si le hubiese preguntado a la gente qué querían, me habrían dicho caballos más rápidos”"
+description: "“Si le hubiese preguntado a la gente qué querían, me habrían dicho caballos más rápidos”."
 img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dGVjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
 ---
 # Derecho Digital: Innovación Legal e Inteligencia Artificial
