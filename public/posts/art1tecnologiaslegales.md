@@ -8,6 +8,7 @@ img: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.
 # Tecnología y Derecho: las nuevas lenguas parecen matemáticas.
 Cita: RC D 2583/2020. 
 Publicado en junio 2020 por Rubinzal Culzoni.
+
 Autor: Tomás Sande
 
 #### Sumario: 
