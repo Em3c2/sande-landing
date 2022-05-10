@@ -31,13 +31,13 @@ const Home = ({ posts = [] }) => {
         <meta property="og:url" content="https://estudiosande.com" />
         <meta property="og:title" content="Home | Estudio Sande" />
         <meta property="og:description" content="Home | Estudio Sande" />
-        <meta property="og:image" content={image || '/images/default-preview.png'} />
+        <meta property="og:image" content="/images/default-preview.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://estudiosande.com" />
         <meta property="twitter:title" content="Home | Estudio Sande" />
         <meta property="twitter:description" content="Home | Estudio Sande" />
-        <meta property="twitter:image" content={image || '/images/default-preview.png'} />
+        <meta property="twitter:image" content="/images/default-preview.png" />
       </Head>
       <Navbar color="white" />
       <section>
