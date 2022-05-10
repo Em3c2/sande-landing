@@ -9,8 +9,8 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.png" />
-        <Script src="/pace.min.js" />
       </Head>
+      <Script src="/pace.min.js" />
       <Component {...pageProps} />
       <Footer
         sentence="Todos los derechos reservados."
