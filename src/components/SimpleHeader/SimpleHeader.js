@@ -13,13 +13,13 @@ const SimpleHeader = ({ title, image, loud, className }) => (
       <meta property="og:url" content="https://estudiosande.com" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={title} />
-      <meta property="og:image" content={image || '/images/cover-home.jpg'} />
+      <meta property="og:image" content={image || '/images/default-preview.png'} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://estudiosande.com" />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={title} />
-      <meta property="twitter:image" content={image || '/images/cover-home.jpg'} />
+      <meta property="twitter:image" content={image || '/images/default-preview.png'} />
     </Head>
     <header className={`${className} ${styles.header}`}>
       {image &&
