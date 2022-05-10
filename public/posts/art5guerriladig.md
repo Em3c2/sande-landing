@@ -1,7 +1,7 @@
 ---
 date: "25-3-21"
 title: "Creación de Soluciones Legales Sin Papeles"
-description: "Guerrilla Digital como Metodologìa de Desarrollo y Cambio Tecnológico."
+description: "Guerrilla Digital como Metodología de Desarrollo y Cambio Tecnológico."
 img: "https://images.unsplash.com/photo-1511376777868-611b54f68947?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
 ---
 
