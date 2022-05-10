@@ -6,7 +6,10 @@ img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&i
 ---
 # Derecho Digital: Innovación Legal e Inteligencia Artificial
 
-Cita: RC D 2891/2020. Publicado en agosto 2020 por Rubinzal Culzoni.
+Cita: RC D 2891/2020. 
+Publicado en agosto 2020 por Rubinzal Culzoni.
+
+Autor: Tomás Sande
 
 ### Sumario:
 I. Necesidades Modernas. II. Disrupción Innovativa. III. Acceso a IA IV. Aplicabilidad V. Sinergia.
