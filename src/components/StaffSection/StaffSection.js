@@ -34,7 +34,7 @@ const StaffSection = ({ full }) => (
               photo="/images/staff/andrea.jpg"
               name="Andrea Campbell"
               role="Partner"
-              bio="La Dra. Campbell posee una notoria trayectoria en medios de comunicación y, actualmente, desarrolla su labor profesional legal en el ámbito de los litigios civiles, promoviendo además el área de litigios relacionados a reclamos contra aseguradoras."
+              bio="La Dra. Campbell posee una notoria trayectoria en medios de comunicación y, actualmente, desarrolla su labor profesional legal en el ámbito de los litigios civiles y siniestros, contando además con un posgrado en UBA relacionado al Derecho de los Seguros."
             />
             <StaffCard
               photo="/images/staff/rosario.jpg"
