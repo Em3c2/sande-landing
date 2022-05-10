@@ -2,6 +2,7 @@
 date: "12-6-20"
 title: "Tecnología y Derecho: las nuevas lenguas parecen matemáticas"
 description: "Como destaca el Dr. Daniel M. Katz, “La informática, computación y tecnología van a modificar tanto lo que implica ser un practicante de la ley como la noción de “pensar como abogado”."
+img: Whttps://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=820&q=80"
 ---
 
 # Tecnología y Derecho: las nuevas lenguas parecen matemáticas.
