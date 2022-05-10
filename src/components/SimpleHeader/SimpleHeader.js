@@ -2,7 +2,7 @@ import Image from '../Image'
 import styles from './styles.module.scss'
 import Head from 'next/head'
 
-const SimpleHeader = ({ title, image = '/images/cover-home.jpg', loud, className }) => (
+const SimpleHeader = ({ title, image, loud, className }) => (
   <>
     <Head>
       <title>{title}</title>
@@ -13,13 +13,13 @@ const SimpleHeader = ({ title, image = '/images/cover-home.jpg', loud, className
       <meta property="og:url" content="https://estudiosande.com" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={title} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={image || '/images/cover-home.jpg'} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://estudiosande.com" />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={title} />
-      <meta property="twitter:image" content={image} />
+      <meta property="twitter:image" content={image || '/images/cover-home.jpg'} />
     </Head>
     <header className={`${className} ${styles.header}`}>
       {image &&
