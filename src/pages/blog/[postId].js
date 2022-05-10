@@ -16,18 +16,32 @@ const Post = ({ data, content }) => {
   const {
     title = "Default Title",
     img = '/post_images/default.png',
+    description = "",
   } = data;
 
   return (
     <main className={styles.post}>
       <Navbar color="black" />
       <Head>
-        <title>{title}</title>
+        <title>{`${title} | Estudio Sande`}</title>
+        <meta name="title" content={`${title} | Estudio Sande`} />
+        <meta name="description" content={description} />
+
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://estudiosande.com" />
+        <meta property="og:title" content={`${title} | Estudio Sande`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={img} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://estudiosande.com" />
+        <meta property="twitter:title" content={`${title} | Estudio Sande`} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={img} />
       </Head>
       <div className='py-12 px-8 text-justify flex flex-col items-center justify-center m-auto gap-5'>
-        <h1 className='text-5xl text-bold text-red-800 mb-10'>{title}</h1>
-        <div className="max-w-5xl w-full">
-          <Image src={img} layout="responsive" width="800" height="350" />
+        <div className="max-w-5xl w-full rounded-md overflow-hidden">
+          <Image src={img} layout="responsive" width="800" height="350" objectFit="cover"/>
         </div>
         <Markdown className='prose max-w-5xl w-full' content={content} />
       </div>

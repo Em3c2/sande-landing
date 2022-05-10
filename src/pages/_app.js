@@ -1,10 +1,15 @@
-import "../styles/globals.scss";
+import Script from "next/script"
+import Head from "next/head"
 import Footer from "../components/Footer";
-import Script from 'next/script'
+
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.png" />
+      </Head>
       <Script src="/pace.min.js" />
       <Component {...pageProps} />
       <Footer
