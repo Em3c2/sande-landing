@@ -27,11 +27,11 @@ const Home = ({ posts = [] }) => {
         <meta name="title" content="Home | Estudio Sande" />
         <meta name="description" content="Home | Estudio Sande" />
 
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://estudiosande.com" />
         <meta property="og:title" content="Home | Estudio Sande" />
         <meta property="og:description" content="Home | Estudio Sande" />
-        <meta property="og:image" content="/default-preview.png" />
+        <meta property="og:image" itemprop="image" content="/default-preview.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://estudiosande.com" />
