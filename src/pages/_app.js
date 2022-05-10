@@ -1,11 +1,16 @@
-import "../styles/globals.scss";
+import Script from "next/script"
+import Head from "next/head"
 import Footer from "../components/Footer";
-import Script from 'next/script'
+
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Script src="/pace.min.js" />
+      <Head>
+        <link rel="shortcut icon" href="/favicon.png" />
+        <Script src="/pace.min.js" />
+      </Head>
       <Component {...pageProps} />
       <Footer
         sentence="Todos los derechos reservados."

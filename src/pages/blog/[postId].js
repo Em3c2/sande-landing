@@ -41,8 +41,8 @@ const Post = ({ data, content }) => {
 
       </Head>
       <div className='py-12 px-8 text-justify flex flex-col items-center justify-center m-auto gap-5'>
-        <div className="max-w-5xl w-full">
-          <Image src={img} layout="responsive" width="800" height="350" />
+        <div className="max-w-5xl w-full rounded-md overflow-hidden">
+          <Image src={img} layout="responsive" width="800" height="350" objectFit="cover"/>
         </div>
         <Markdown className='prose max-w-5xl w-full' content={content} />
       </div>
