@@ -1,5 +1,5 @@
 ---
-date: "12-3-22"
+date: "12-10-20"
 title: "Abogados del Cambio: pautas para adoptar conductas innovadoras en el campo legal"
 description: "La adopción de cambios es una de las facetas más importantes de la humanidad y, como todo acto humano, no se limita a una mera respuesta binaria de bueno/malo, verdadero/falso."
 img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
