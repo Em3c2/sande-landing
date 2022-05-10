@@ -23,19 +23,19 @@ const Post = ({ data, content }) => {
     <main className={styles.post}>
       <Navbar color="black" />
       <Head>
-        <title>{title}</title>
-        <meta name="title" content={title} />
+        <title>{`${title} | Estudio Sande`}</title>
+        <meta name="title" content={`${title} | Estudio Sande`} />
         <meta name="description" content={description} />
 
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://estudiosande.com" />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={`${title} | Estudio Sande`} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={img} />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://estudiosande.com" />
-        <meta property="twitter:title" content={title} />
+        <meta property="twitter:title" content={`${title} | Estudio Sande`} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={img} />
       </Head>

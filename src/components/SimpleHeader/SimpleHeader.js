@@ -5,20 +5,20 @@ import Head from 'next/head'
 const SimpleHeader = ({ title, image, loud, className }) => (
   <>
     <Head>
-      <title>{title}</title>
-      <meta name="title" content={title} />
-      <meta name="description" content={title} />
+      <title>{`${title} | Estudio Sande`}</title>
+      <meta name="title" content={`${title} | Estudio Sande`} />
+      <meta name="description" content={`${title} | Estudio Sande`} />
 
       <meta property="og:type" content="article" />
       <meta property="og:url" content="https://estudiosande.com" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={title} />
+      <meta property="og:title" content={`${title} | Estudio Sande`} />
+      <meta property="og:description" content={`${title} | Estudio Sande`} />
       <meta property="og:image" content={image || '/default-preview.png'} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://estudiosande.com" />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={title} />
+      <meta property="twitter:title" content={`${title} | Estudio Sande`} />
+      <meta property="twitter:description" content={`${title} | Estudio Sande`} />
       <meta property="twitter:image" content={image || '/default-preview.png'} />
     </Head>
     <header className={`${className} ${styles.header}`}>
