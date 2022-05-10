@@ -31,8 +31,8 @@ const Post = ({ data, content }) => {
         <meta property="og:url" content="https://estudiosande.com" />
         <meta property="og:title" content={`${title} | Estudio Sande`} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" itemProp="image" content={img.includes('post_images') ? `https://www.estudiosande.com/${img}` : img} />
-        <meta property="og:image:secure_url" itemProp="image" content={img.includes('post_images') ? `https://www.estudiosande.com/${img}` : img} />
+        <meta property="og:image" content={img.includes('post_images') ? `https://www.estudiosande.com/${img}` : img} />
+        <meta property="og:image:secure_url" content={img.includes('post_images') ? `https://www.estudiosande.com/${img}` : img} />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://estudiosande.com" />

@@ -13,8 +13,8 @@ const SimpleHeader = ({ title, image, loud, className }) => (
       <meta property="og:url" content="https://estudiosande.com" />
       <meta property="og:title" content={`${title} | Estudio Sande`} />
       <meta property="og:description" content={`${title} | Estudio Sande`} />
-      <meta property="og:image" itemProp="image" content={image || 'https://www.estudiosande.com/default-preview.png'} />
-      <meta property="og:image:secure_url" itemProp="image" content={image || 'https://www.estudiosande.com/default-preview.png'} />
+      <meta property="og:image" content={image || 'https://www.estudiosande.com/default-preview.png'} />
+      <meta property="og:image:secure_url" content={image || 'https://www.estudiosande.com/default-preview.png'} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://estudiosande.com" />
