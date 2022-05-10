@@ -32,7 +32,8 @@ const Post = ({ data, content }) => {
         <meta property="og:title" content={`${title} | Estudio Sande`} />
         <meta property="og:description" content={description} />
         <meta property="og:image" itemProp="image" content={img} />
-
+        <meta property="og:image:secure_url" itemProp="image" content={img} />
+        
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://estudiosande.com" />
         <meta property="twitter:title" content={`${title} | Estudio Sande`} />
