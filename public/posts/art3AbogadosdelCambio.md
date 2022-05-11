@@ -4,7 +4,8 @@ title: "Abogados del Cambio: pautas para adoptar conductas innovadoras en el cam
 description: "La adopción de cambios es una de las facetas más importantes de la humanidad y, como todo acto humano, no se limita a una mera respuesta binaria de bueno/malo, verdadero/falso."
 img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
 ---
-# Abogados del Cambio: pautas para adoptar conductas innovadoras en el campo legal.
+# Abogados del Cambio
+## Pautas para Adoptar Conductas Innovadoras en el Campo Legal.
 
 Cita: RC D 3109/2020. 
 Publicado en octubre 2020 por Rubinzal Culzoni.
