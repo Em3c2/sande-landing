@@ -5,8 +5,8 @@ description: "Guerrilla Digital como Metodología de Desarrollo y Cambio Tecnol�
 img: "https://images.unsplash.com/photo-1511376777868-611b54f68947?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
 ---
 
-# CREACIÓN DE SOLUCIONES LEGALES SIN PAPELES. 
-## GUERRILLA DIGITAL COMO METODOLOGÍA DE DESARROLLO Y CAMBIO TECNOLÓGICO.
+# CREACIÓN DE SOLUCIONES LEGALES SIN PAPELES
+## GUERRILLA DIGITAL COMO METODOLOGÍA DE DESARROLLO Y CAMBIO TECNOLÓGICO
 
 Cita: RC D 93/2021. Publicado en marzo 2021 por Rubinzal Culzoni.
 
