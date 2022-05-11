@@ -4,7 +4,8 @@ title: "Inteligencia Artificial Práctica: adquisición y uso de datos legales"
 description: "En nuestras demandas, resoluciones, documentos, facturas y semejantes hay una gran cantidad de información que no está siendo extraída."
 img: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
 ---
-# Inteligencia Artificial Práctica: adquisición y uso de datos legales.
+# Inteligencia Artificial Práctica
+## Adquisición y Uso de Datos Legales.
 
 Cita: RC D 3168/2020. Publicado en agosto 2020 por Rubinzal Culzoni.
 
