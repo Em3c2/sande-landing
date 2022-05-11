@@ -22,7 +22,7 @@ const ProcessSection = ({ title, caption }) => {
           <ProcessFragment
             number="03"
             subtitle="Culminación"
-            paragraph="Realizadas las etapas profesionales y alcanzadas las metas pretendidas, mantenemos un estrecho contacto con nuestros clientes, dejando nuestra puertasiempre abierta para asesorarlos y acompañarlos."
+            paragraph="Realizadas las etapas profesionales y alcanzadas las metas pretendidas, mantenemos un estrecho contacto con nuestros clientes, dejando nuestra puerta siempre abierta para asesorarlos y acompañarlos."
           />
         </div>
       </div>
