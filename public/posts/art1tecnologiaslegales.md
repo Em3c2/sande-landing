@@ -5,7 +5,9 @@ description: "Como destaca el Dr. Daniel M. Katz, “La informática, computaci�
 img: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
 ---
 
-# Tecnología y Derecho: las nuevas lenguas parecen matemáticas.
+# Tecnología y Derecho 
+## Las nuevas lenguas parecen matemáticas.
+
 Cita: RC D 2583/2020. 
 Publicado en junio 2020 por Rubinzal Culzoni.
 
