@@ -8,14 +8,16 @@ import { read } from 'gray-matter'
 import getConfig from 'next/config'
 import { redirect } from '../../utils'
 import styles from './post.module.scss'
+import Spinner from '../../components/Spinner';
 
 const { serverRuntimeConfig } = getConfig()
-const Markdown = dynamic(() => import('../../components/Markdown'), { loading: () => <p>Loading...</p> })
+const Markdown = dynamic(() => import('../../components/Markdown'), { loading: () => <Spinner /> })
 
 const Post = ({ data, content }) => {
   const {
     title = "Default Title",
     img = '/post_images/default.png',
+    author,
     description = "",
   } = data;
 
@@ -40,9 +42,9 @@ const Post = ({ data, content }) => {
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={img.includes('post_images') ? `https://www.estudiosande.com/${img}` : img} />
       </Head>
-      <div className='py-12 px-8 text-justify flex flex-col items-center justify-center m-auto gap-5'>
-        <div className="max-w-5xl w-full rounded-md overflow-hidden">
-          <Image src={img} layout="responsive" width="800" height="350" objectFit="cover" />
+      <div className='pb-12 lg:py-12 px-8 text-justify flex flex-col items-center justify-center m-auto gap-5'>
+        <div className="relative w-screen max-w-5xl h-60 lg:h-96 lg:rounded-md -mx-8 overflow-hidden">
+          <Image src={img} layout="fill" width="800" height="350" objectFit="cover" />
         </div>
         <Markdown className='prose max-w-5xl w-full' content={content} />
       </div>

@@ -22,7 +22,7 @@ const PostCart = ({ className, post }) => {
             <div className={styles.reading}>
               <small>{time}&#39;<br />read</small>
             </div>
-            <small className={styles.author}> Posteado por {author}</small>
+            { author && <small className={styles.author}> Posteado por {author}</small> }
             <p className={styles.title}>{title}</p>
             <p className={styles.description}>{description}</p>
           </div>

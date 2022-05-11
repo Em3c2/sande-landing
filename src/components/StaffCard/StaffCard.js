@@ -47,37 +47,39 @@ const StaffCard = ({ className, color, name, role, email, phone, photo = '/image
               objectPosition="top"
             />
           </div>
-          <div className={styles.caption} style={{ backgroundColor: color ? color : '#6683BB' }}>
-            <button
-              className={styles.closeBtn}
-              onClick={() => toggleModalIsOpen(false)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="31"
-                height="30"
-                fill="none"
-                viewBox="0 0 31 30"
+          <div className={styles.scrollWrapper}>
+            <div className={styles.caption} style={{ backgroundColor: color ? color : '#6683BB' }}>
+              <button
+                className={styles.closeBtn}
+                onClick={() => toggleModalIsOpen(false)}
               >
-                <path
-                  stroke="#fff"
-                  strokeLinecap="round"
-                  strokeWidth="2"
-                  d="M1 28.586L28.586 1"
-                ></path>
-                <path
-                  stroke="#fff"
-                  strokeLinecap="round"
-                  strokeWidth="2"
-                  d="M2.414 1L30 28.586"
-                ></path>
-              </svg>
-            </button>
-            <p className={styles.name}>{name}</p>
-            <p className={styles.role}>{role}</p>
-            <p>{email}</p>
-            <p>{phone}</p>
-            <p className={styles.paragraph}>{bio}</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="31"
+                  height="30"
+                  fill="none"
+                  viewBox="0 0 31 30"
+                >
+                  <path
+                    stroke="#fff"
+                    strokeLinecap="round"
+                    strokeWidth="2"
+                    d="M1 28.586L28.586 1"
+                  ></path>
+                  <path
+                    stroke="#fff"
+                    strokeLinecap="round"
+                    strokeWidth="2"
+                    d="M2.414 1L30 28.586"
+                  ></path>
+                </svg>
+              </button>
+              <p className={styles.name}>{name}</p>
+              <p className={styles.role}>{role}</p>
+              <p>{email}</p>
+              <p>{phone}</p>
+              <p className={styles.paragraph}>{bio}</p>
+            </div>
           </div>
         </Modal >
       )

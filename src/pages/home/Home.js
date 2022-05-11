@@ -10,12 +10,14 @@ import Image from '../../components/Image'
 import Navbar from '../../components/Navbar'
 import Icon from '../../components/Icon'
 import ProcessSection from '../../components/ProcessSection'
+import Spinner from '../../components/Spinner';
+
 import styles from './styles.module.scss'
 
-const SimpleCard = dynamic(() => import('../../components/SimpleCard/'), { loading: () => <p>Loading...</p> })
-const StaffSection = dynamic(() => import('../../components/StaffSection/'), { loading: () => <p>Loading...</p> })
-const PostCard = dynamic(() => import('../../components/PostCart/'), { loading: () => <p>Loading...</p> })
-const Form = dynamic(() => import('../../components/Form'), { loading: () => <p>Loading...</p> })
+const SimpleCard = dynamic(() => import('../../components/SimpleCard/'), { loading: () => <Spinner /> })
+const StaffSection = dynamic(() => import('../../components/StaffSection/'), { loading: () => <Spinner /> })
+const PostsSection = dynamic(() => import('../../components/PostsSection/'), { loading: () => <Spinner /> })
+const Form = dynamic(() => import('../../components/Form'), { loading: () => <Spinner /> })
 
 const { serverRuntimeConfig } = getConfig()
 
@@ -144,19 +146,8 @@ const Home = ({ posts = [] }) => {
 
       <StaffSection />
 
-      <section className={styles.postsSection}>
-        <h2>Nuestro blog</h2>
-        <div className={styles.postsContainer}>
-          {posts.map(post => (
-            <PostCard post={post} key={post.id} className="block md:last-of-type:hidden lg:last-of-type:block" />
-          ))}
-        </div>
-        <Link href="/blog">
-          <a className='btn__blue m-auto'>
-            Ir al blog
-          </a>
-        </Link>
-      </section>
+      <PostsSection posts={posts} />
+
       <section>
         <Form />
       </section>

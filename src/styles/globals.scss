@@ -7,7 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /*Global Sets*/
 * {
   font-family: "Open Sans", $default-font;
@@ -30,11 +29,10 @@ iframe {
 }
 
 main {
-  margin-top: 3.5rem;
   max-width: $max-width;
   min-height: calc(100vh - 18rem);
-  margin: auto;
-    
+  margin: 3.5rem auto auto;
+
   @media (min-width: 1024px) {
     @apply mt-0;
   }
@@ -45,10 +43,19 @@ footer {
   margin: auto;
 }
 
-
 /*React Modal config*/
-.ReactModalPortal {
-  @apply relative z-50;
+.ReactModal {
+  &Portal {
+    @apply relative z-50;
+  }
+
+  &__Body--open {
+    @apply h-0 overflow-hidden;
+  }
+
+  &__Overlay {
+    background-color: rgba(0, 0, 0, 0.6) #{"!important"};
+  }
 }
 
 /*Tailwind config*/
