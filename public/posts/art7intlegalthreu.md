@@ -12,6 +12,9 @@ Publicado en junio 2021 por La Ley - Thomson Reuters, Suplemento Innovación & D
 
 Autor: Tomas Sande, Abogado graduado en UBA, Coordina el laboratorio de Legal Technologies de la Universidad del CEMA.
 
+### Sumario: 
+I.Introducción. II. Impacto Tecnológico. III. Datos y Procesos. IV. Modelo Clásico. V. Modelos Potenciados por IA. VI. Legal Operations. VII. Legaltech. VIII. Transofrmación. IX. Conclusiones.
+
 ### I. INTRODUCCIÓN
 
 En el mes de julio del año dos mil quince, una sentencia estadounidense se arrogó la facultad de definir quienes podían realizar tareas legales, entendiendo que estas sólo podían ser desarrolladas por humanos.[1]
