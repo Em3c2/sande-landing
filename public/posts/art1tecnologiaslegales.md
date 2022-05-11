@@ -6,7 +6,7 @@ img: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.
 ---
 
 # TECNOLOGÍA Y DERECHO
-## LAS NUEVAS LENGUAS PARECEN MATEMÁTICAS.
+## LAS NUEVAS LENGUAS PARECEN MATEMÁTICAS
 
 Cita: RC D 2583/2020. 
 Publicado en junio 2020 por Rubinzal Culzoni.
