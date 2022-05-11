@@ -30,8 +30,6 @@ const Estudio = () => {
             intimidad pilares clave de nuestra labor profesional.
             Actualmente, hemos acoplado a nuestro conocimiento de litigios la provisión de servicios enfocados en consultoría
             y desarrollo de tecnologías orientadas al campo legal, además de contribuir académicamente a dicha corriente.
-            Nuestro objetivo es brindar un espacio de calidad y confidencialidad para las necesidades legales de todos nuestros
-            clientes, siendo el cuidado de sus intereses el pilar central de nuestro trabajo.
           </p>
         </div>
       </section>
