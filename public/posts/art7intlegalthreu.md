@@ -6,7 +6,7 @@ img: "https://images.unsplash.com/photo-1635187452645-420a43369504?ixlib=rb-1.2.
 ---
 
 # INTELIGENCIA LEGAL
-## Nuevos modelos de negocio.
+## NUEVOS MODELOS DE NEGOCIO
 
 Publicado en junio 2021 por La Ley - Thomson Reuters, Suplemento Innovación & Derecho N° 3.
 
