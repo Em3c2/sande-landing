@@ -18,6 +18,7 @@ const Estudio = () => {
           className="mb-4 lg:mb-10 relative mt-16 lg:mt-0 xl:top-0"
           title="El Estudio"
           image="/images/cover-estudio.jpg"
+          preview="/images/cover-estudio-preview.jpg"
         />
         <div className="prose w-full max-w-5xl p-10 m-auto leading-6">
           <p className="text-justify">
