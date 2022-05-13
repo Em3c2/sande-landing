@@ -15,7 +15,7 @@ const Servicios = () => {
       <section>
         <SimpleHeader
           image='/images/cover-services.jpg'
-          preview='/images/cover-services-preview.jpg'
+          preview='https://estudiosande.com/images/cover-services-preview.jpeg'
           title="Nuestros servicios"
           className="mb-4 lg:mb-24 relative mt-16 lg:mt-0 xl:top-0"
         />
