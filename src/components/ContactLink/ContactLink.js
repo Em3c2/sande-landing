@@ -1,12 +1,11 @@
 import Icon from "../Icon";
-
 import styles from './styles.module.scss';
 
 const ContactLink = ({ icon, text, type, link }) => {
   let customLink;
 
   if (type === 'mailto') customLink = `mailto:${text}`;
-  if (type === 'whatsapp') customLink = `https://api.whatsapp.com/send?phone=${text}`;
+  if (type === 'whatsapp') customLink = `https://api.whatsapp.com/send?phone=${link}`;
   if (type === 'external') customLink = link;
 
   return (

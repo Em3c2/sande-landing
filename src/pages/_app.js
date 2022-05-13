@@ -14,9 +14,9 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <Footer
         sentence="Todos los derechos reservados."
-        phone="54 9 11 59219604"
+        phone="+54 11 2472-3830"
         email="tomas@estudiosande.com"
-        direction="Paraguay 1551, 4to Piso, Buenos Aires."
+        direction="Paraguay 1551, 4to Piso - Buenos Aires, Argentina"
       />
     </>
   );

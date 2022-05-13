@@ -38,6 +38,7 @@ const Contacto = () => {
             text="+54 11 2472-3830"
             icon="Whatsapp"
             type="whatsapp"
+            link="541124723830"
           />
         </div>
         <div className={styles.map}>
