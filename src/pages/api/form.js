@@ -1,4 +1,4 @@
-const FORMSPARK_ACTION_URL = "https://submit-form.com/tiDQxA7K";
+const ACTION_URL = process.env.ACTION_URL;
 
 const handler = (req, res) => {
   if (req.method !== 'POST') return;
@@ -12,7 +12,9 @@ const handler = (req, res) => {
     body: JSON.stringify(req.body),
   }
 
-  fetch(FORMSPARK_ACTION_URL, options)
+  if(!ACTION_URL) throw new Error('Missed enviroment variable');
+
+  fetch(ACTION_URL, options)
     .then(data => {
       return res.status(200).json({ data });
     })
