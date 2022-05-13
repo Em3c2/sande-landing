@@ -17,7 +17,7 @@ const Contacto = () => {
         <Navbar color="black" />
         <SimpleHeader
           title="Contactanos"
-          className="mb-4 lg:mb-24 relative mt-16 lg:mt-0 xl:top-0"
+          className="mb-4 lg:mb-24 relative xl:top-0"
           loud={false}
         />
       </div>
